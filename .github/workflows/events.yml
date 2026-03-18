@@ -1,0 +1,49 @@
+name: Weekly Events Digest
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'   # Every Monday at 9am UTC
+  workflow_dispatch:        # Also allows manual runs from GitHub UI
+
+permissions:
+  contents: write           # Needed to commit dashboard.html back to repo
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scrape events
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+          EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
+          BANDSINTOWN_APP_ID: ${{ secrets.BANDSINTOWN_APP_ID }}
+          MEETUP_API_KEY: ${{ secrets.MEETUP_API_KEY }}
+        run: python scraper.py
+
+      - name: Rank events with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python ranker.py
+
+      - name: Generate dashboard
+        run: python dashboard.py
+
+      - name: Commit & push dashboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard.html events_ranked.json
+          git diff --staged --quiet || git commit -m "Weekly events update $(date -u +%Y-%m-%d)"
+          git push
