@@ -361,21 +361,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
-    "date": "2026-03-26",
-    "venue": "Miller Park at BYU",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-oAy",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Disney's High School Musical Jr",
     "date": "2026-03-26",
     "venue": "The Theater at Mount Jordan",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-26-2026/event/1E006444AEED69E2",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
+    "date": "2026-03-26",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-oAy",
     "score": 0,
     "reason": ""
   },
@@ -451,21 +451,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
-    "date": "2026-03-27",
-    "venue": "Miller Park at BYU",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okZ",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Disney's High School Musical Jr",
     "date": "2026-03-27",
     "venue": "The Theater at Mount Jordan",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-27-2026/event/1E006444AEF069E7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
+    "date": "2026-03-27",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okZ",
     "score": 0,
     "reason": ""
   },
@@ -561,21 +561,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
-    "date": "2026-03-28",
-    "venue": "Miller Park at BYU",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okv",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Disney's High School Musical Jr",
     "date": "2026-03-28",
     "venue": "The Theater at Mount Jordan",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-28-2026/event/1E006444AEF369EE",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
+    "date": "2026-03-28",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okv",
     "score": 0,
     "reason": ""
   },
@@ -2266,6 +2266,566 @@
     "venue": "Pioneer Park, Salt Lake City",
     "category": "Farmers Market",
     "url": "https://www.slcfarmersmarket.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Open Mic",
+    "date": "Apr 1",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://www.wiseguyscomedy.com/utah/salt-lake-city/the-showroom/e/open-mic",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Denver Nuggets at Utah Jazz",
+    "date": "Apr 1",
+    "venue": "Delta Center",
+    "category": "Event",
+    "url": "https://www.eventbrite.com/e/utah-sports-entertainment-career-expo-hosted-by-the-utah-jazz-tickets-1980479542625",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Salt Lake City, UT",
+    "date": "Apr 10",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://adamcarolla.com/events/salt-lake-city-ut/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Memphis Grizzlies at Utah Jazz",
+    "date": "Apr 10",
+    "venue": "Delta Center",
+    "category": "Event",
+    "url": "https://www.visitsaltlake.com/event/sports-and-outdoors/utah-jazz-vs-memphis-grizzlies/71745/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Adam Carolla",
+    "date": "Apr 11",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://www.wiseguyscomedy.com/utah/salt-lake-city/the-showroom/e/adam-carolla/349147",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Ari Matti",
+    "date": "Apr 16",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://www.wiseguyscomedy.com/utah/salt-lake-city/the-showroom/e/ari-matti/340305",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Downtown Farmers Market: Winter Market 2025-26",
+    "date": "Apr 18",
+    "venue": "The Leonardo",
+    "category": "Event",
+    "url": "https://www.cityspark.com/html5-calendar/details/downtown-farmers-market-winter-market-2025-26/17649149/2026-04-18T10",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Winter Farmers Market at The Other Side Village",
+    "date": "Apr 18",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.facebook.com/events/1882-w-indiana-ave-salt-lake-city-ut-84104-3685-united-states/winter-farmers-market-at-the-other-side-village/772183079225044/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Earth Day Tradeshow: Farmer's Market Edition - LUNCH RSVP 11 AM - 2 PM",
+    "date": "Apr 22",
+    "venue": "Tracy Aviary at Liberty Park",
+    "category": "Event",
+    "url": "https://www.eventbrite.com/e/earth-day-tradeshow-farmers-market-edition-lunch-rsvp-11-am-2-pm-tickets-1982233366359",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Winter Farmers Market at The Other Side Village",
+    "date": "Apr 25",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.facebook.com/events/1882-w-indiana-ave-salt-lake-city-ut-84104-3685-united-states/winter-farmers-market-at-the-other-side-village/772183075891711/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Blossom Run 10K, 5K, 1 Mile",
+    "date": "Apr 25",
+    "venue": "Rowley's Red Barn",
+    "category": "Event",
+    "url": "https://www.visitsaltlake.com/event/outdoor-recreation/blossom-run-10k-5k-1-mile/76219/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Antelope Causeway Half Marathon, 10K, 5K & Duathlon",
+    "date": "Apr 3",
+    "venue": "Antelope Island State Park Marina (temp visitor center)",
+    "category": "Event",
+    "url": "https://evvnt.com/events/?_evDiscoveryPath=/event/81133r-antelope-causeway-half-marathon-10k-5k-duathlon",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Lucy Darling",
+    "date": "Apr 3",
+    "venue": "Eccles Theater",
+    "category": "Event",
+    "url": "https://www.visitsaltlake.com/event/music/lucy-darling%3A-simply-darling/75980/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "The Jazz Room: A Journey to the Heart of New Orleans",
+    "date": "Apr 30",
+    "venue": "Clubhouse on South Temple",
+    "category": "Event",
+    "url": "https://www.salt-lake-city-theater.com/shows/the-clubhouse-on-south-temple/the-jazz-room-a-journey-to-the-heart-of-new-orleans",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Salt Lake City Downtown Winter Farmers Market",
+    "date": "Apr 4",
+    "venue": "The Gateway",
+    "category": "Event",
+    "url": "https://local.aarp.org/event/salt-lake-city-downtown-winter-farmers-market-2026-04-04-salt-lake-city-ut.html",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Eggs Legs Half Marathon, 10K, 5K",
+    "date": "Apr 4",
+    "venue": "Gardner Village",
+    "category": "Event",
+    "url": "https://saltlakecity.kidsoutandabout.com/content/eggs-legs-5k-10k-half-marathon-gardner-village",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Samara Joy",
+    "date": "Apr 7",
+    "venue": "Kingsbury Hall",
+    "category": "Event",
+    "url": "https://open.spotify.com/concert/3qnWLn0skzE1MIMYsGglyL",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Farmers Market South Jordan City & Utah Farm Bureau",
+    "date": "Aug 9",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.cityspark.com/html5-calendar/details/farmers-market-south-jordan-city-utah-farm-bureau/16508432/2026-08-09T08",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Logan River Trail 10K & 5K",
+    "date": "Jul 18",
+    "venue": "",
+    "category": "Event",
+    "url": "https://runsignup.com/Race/142117/Sponsor/556791",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Jurassic Run 5K",
+    "date": "Jun 27",
+    "venue": "Ogden's George S. Eccles Dinosaur Park",
+    "category": "Event",
+    "url": "https://runsignup.com/Race/JurassicRun/Page/Frequently-Asked-Questions",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Martin Amini",
+    "date": "Jun 5",
+    "venue": "The Gateway",
+    "category": "Event",
+    "url": "https://www.wiseguyscomedy.com/utah/salt-lake-city/the-showroom/e/martin-amini/335993",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Park City Trail Series 5K",
+    "date": "Jun 6",
+    "venue": "Park City, Utah",
+    "category": "Event",
+    "url": "https://www.runguides.com/event/2354/park-city-trail-series-5k",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Lehi Cake Truffle Class",
+    "date": "Mar 20",
+    "venue": "Kneaders Bakery & Cafe",
+    "category": "Event",
+    "url": "https://www.localwineevents.com/view/event/lehi-cake-truffle-class/991130",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Men\u2019s Small Group",
+    "date": "Mar 20",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.alpinebible.com/event/mens-small-group-86/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Topic TBA w/ Presenter TBA (and Pizza)",
+    "date": "Mar 20",
+    "venue": "Vivint",
+    "category": "Event",
+    "url": "https://www.meetup.com/utah-colo/events/zrtdstyjcfbzb/?eventOrigin=group_upcoming_events",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "StepIt Strength",
+    "date": "Mar 20",
+    "venue": "Lehi Legacy Center",
+    "category": "Event",
+    "url": "https://stepitfitness.com/event/stepit-strength-4/2026-03-19/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "March Madness",
+    "date": "Mar 20",
+    "venue": "Karl Malone Training Center",
+    "category": "Event",
+    "url": "https://basketball.exposureevents.com/263318/march-madness",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Ashton Gardens Rose Spring Pruning Workshop",
+    "date": "Mar 20",
+    "venue": "Ashton Gardens at Thanksgiving Point",
+    "category": "Event",
+    "url": "https://utahrosesociety.org/event/ashton-gardens-rose-spring-pruning-workshop-2/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Devon Walker",
+    "date": "Mar 20",
+    "venue": "Wiseguys Comedy Club, Jordan Landing",
+    "category": "Event",
+    "url": "https://www.wiseguyscomedy.com/utah/west-jordan/jordan-landing/e/devon-walker/347937",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Ryan Goodcase",
+    "date": "Mar 20",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://c4ba0880-7ae8-4608-af7a-dada8b33122a.seatengine.com/shows/350894",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Trey Kennedy",
+    "date": "Mar 20",
+    "venue": "Eccles Theater",
+    "category": "Event",
+    "url": "https://www.ksl.com/events/details/542892?date=2026-03-20",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "American Idiot",
+    "date": "Mar 20",
+    "venue": "The Grand Theatre",
+    "category": "Event",
+    "url": "https://www.eventticketscenter.com/american-idiot-salt-lake-city-03-20-2026/7656815/t",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Tanner Dance - Wild Ideas",
+    "date": "Mar 20",
+    "venue": "Capitol Theatre",
+    "category": "Event",
+    "url": "https://www.visitsaltlake.com/event/dance/wild-ideas/76358/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Yoga at the Outlets",
+    "date": "Mar 21",
+    "venue": "Outlets at Traverse Mountain",
+    "category": "Event",
+    "url": "https://www.eventbrite.com/e/yoga-at-the-outlets-tickets-1984650077808",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Tentative Ballroom Skyridge Classic",
+    "date": "Mar 21",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.cityspark.com/html5-calendar/details/tentative-ballroom-skyridge-classic/17665602/2026-03-21T00",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Salt Lake City Downtown Winter Farmers Market",
+    "date": "Mar 21",
+    "venue": "The Gateway",
+    "category": "Event",
+    "url": "https://local.aarp.org/event/salt-lake-city-downtown-winter-farmers-market-2026-03-21-salt-lake-city-ut.html",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Winter Farmers Market at The Other Side Village",
+    "date": "Mar 21",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.facebook.com/events/1882-w-indiana-ave-salt-lake-city-ut-84104-3685-united-states/winter-farmers-market-at-the-other-side-village/772183069225045/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Salt Lake Wildcats 5k Fundraiser",
+    "date": "Mar 21",
+    "venue": "Wheeler Historic Farm",
+    "category": "Event",
+    "url": "https://envisionwise.com/local-events?_evDiscoveryPath=/event/84612c-salt-lake-wildcats-5k-fundraiser",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "2026 Vineyard City Gold Rush 5K & Kids 1K",
+    "date": "Mar 21",
+    "venue": "Vineyard Grove Park",
+    "category": "Event",
+    "url": "https://runsignup.com/Race/103389/PrivacyPolicy",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Heather McDonald",
+    "date": "Mar 21",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://www.wiseguyscomedy.com/utah/salt-lake-city/the-showroom/e/heather-mcdonald/354515",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "John Mulaney",
+    "date": "Mar 21",
+    "venue": "Eccles Theater",
+    "category": "Event",
+    "url": "https://open.spotify.com/concert/1ZliM2wWeQbgY4P0HgwNe1",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "King James",
+    "date": "Mar 21",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.viagogo.com/hk/en/Theater-Tickets/Theater/King-James-The-Play/E-158210544",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Philadelphia 76ers at Utah Jazz",
+    "date": "Mar 21",
+    "venue": "Delta Center",
+    "category": "Event",
+    "url": "https://www.visitsaltlake.com/event/sports-and-outdoors/utah-jazz-vs-philadelphia-76ers/71740/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Reckless Rooster",
+    "date": "Mar 22",
+    "venue": "Scorez Sports Bar",
+    "category": "Event",
+    "url": "https://open.spotify.com/concert/5XE1l3m9LAiKKxhVPrZA6r",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Michael McIntyre",
+    "date": "Mar 22",
+    "venue": "Eccles Theater",
+    "category": "Event",
+    "url": "https://www.visitsaltlake.com/event/theatre/michael-mcintyre%3A-hello-america/73646/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Bill Burr",
+    "date": "Mar 23",
+    "venue": "Kingsbury Hall",
+    "category": "Event",
+    "url": "https://open.spotify.com/concert/1WPCMMgiWkzOmXxkYoo1DN",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Salt Lake City Stars vs. Raptors 905",
+    "date": "Mar 23",
+    "venue": "Delta Center",
+    "category": "Event",
+    "url": "https://www.nba.com/game/tor-vs-uta-0022501043",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Toronto Raptors at Utah Jazz",
+    "date": "Mar 23",
+    "venue": "Delta Center",
+    "category": "Event",
+    "url": "https://www.flicks.com.au/sport/basketball/nba/nba-1074/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "JIMBO'S 'JOAN! Can We Laugh?! Tour",
+    "date": "Mar 25",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://www.viagogo.com/Theater-Tickets/Shows/Jimbo-Tickets/E-160020819",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Utah Jazz vs. Washington Wizards",
+    "date": "Mar 25",
+    "venue": "Delta Center",
+    "category": "Event",
+    "url": "https://www.flicks.co.nz/sport/basketball/nba/nba-1088/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Cat Clyde",
+    "date": "Mar 27",
+    "venue": "The State Room",
+    "category": "Event",
+    "url": "https://open.spotify.com/concert/2s2fMjgBXVl2ZbKpxDcFJF",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Salt Lake City Downtown Winter Farmers Market",
+    "date": "Mar 28",
+    "venue": "The Gateway",
+    "category": "Event",
+    "url": "https://local.aarp.org/event/salt-lake-city-downtown-winter-farmers-market-2026-03-28-salt-lake-city-ut.html",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Winter Farmers Market at The Other Side Village",
+    "date": "Mar 28",
+    "venue": "",
+    "category": "Event",
+    "url": "https://www.facebook.com/events/1882-w-indiana-ave-salt-lake-city-ut-84104-3685-united-states/winter-farmers-market-at-the-other-side-village/772183062558379/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Cleveland Cavaliers at Utah Jazz",
+    "date": "Mar 30",
+    "venue": "Delta Center",
+    "category": "Event",
+    "url": "https://www.flicks.com.au/sport/basketball/nba/nba-1127/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Canyon Road 10K & 5K",
+    "date": "May 2",
+    "venue": "",
+    "category": "Event",
+    "url": "https://runsignup.com/Race/142074/Sponsor/1015649",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Shoreline 10K & 5K",
+    "date": "May 30",
+    "venue": "Canyon Entrance Park",
+    "category": "Event",
+    "url": "https://discover.events.com/us/utah/north-logan/e/sports/shoreline-10k-5k-canyon-entrance-park-456337119",
     "score": 0,
     "reason": ""
   }
