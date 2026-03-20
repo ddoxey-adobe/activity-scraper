@@ -462,7 +462,10 @@ def fetch_covey_center() -> list[dict]:
     skip = {"tickets", "visit", "classes", "rentals", "support", "about", "home",
             "search", "sign in", "contact", "giveaway", "rules", "get tickets",
             "covey presents", "free concerts", "black box", "community events",
-            "ticket giveaway", "back box shows"}
+            "ticket giveaway", "back box shows", "privacy policy", "community news",
+            "business & innovation hub", "explore & enjoy", "utilities", "fly provo",
+            "share feedback", "join our team", "site map", "accessibility",
+            "exceptional care"}
     for url, category in pages:
         soup = _get(url)
         if not soup:
@@ -470,7 +473,7 @@ def fetch_covey_center() -> list[dict]:
         for item in soup.select("li a, .listing a, h2 a, h3 a, h4 a"):
             name = item.get_text(strip=True)
             href = item.get("href", "")
-            if not name or len(name) < 5 or any(s in name.lower() for s in skip):
+            if not name or len(name) < 8 or any(s in name.lower() for s in skip):
                 continue
             if href.startswith("/"):
                 href = "https://www.provo.gov" + href
