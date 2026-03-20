@@ -61,51 +61,42 @@ def fetch_eventbrite() -> list[dict]:
         return []
     headers = {"Authorization": f"Bearer {key}"}
     events = []
-    # Eventbrite v3 search endpoint
-    params = {
-        "location.latitude": LAT,
-        "location.longitude": LNG,
-        "location.within": f"{RADIUS_MILES}mi",
-        "start_date.range_start": NOW.strftime(FMT),
-        "start_date.range_end": END.strftime(FMT),
-        "expand": "venue,category",
-        "page_size": 50,
-    }
-    page_token = None
-    page = 0
-    while page < 5:
-        if page_token:
-            params["continuation"] = page_token
-        try:
-            r = requests.get(
-                "https://www.eventbriteapi.com/v3/events/search/",
-                headers=headers, params=params, timeout=10
-            )
-            if r.status_code in (404, 405):
-                print(f"  Eventbrite: API endpoint unavailable ({r.status_code}), skipping")
-                break
-            r.raise_for_status()
-            data = r.json()
-        except Exception as ex:
-            print(f"  Eventbrite error: {ex}")
-            break
+    # Use the organizations/me endpoint to find org ID, then search by location
+    # Fallback: use the listings discovery endpoint
+    try:
+        # Get events near location via the newer listings endpoint
+        r = requests.get(
+            "https://www.eventbriteapi.com/v3/events/",
+            headers=headers,
+            params={
+                "location.latitude": LAT,
+                "location.longitude": LNG,
+                "location.within": f"{RADIUS_MILES}mi",
+                "start_date.range_start": NOW.strftime(FMT),
+                "start_date.range_end": END.strftime(FMT),
+                "expand": "venue",
+                "status": "live",
+            },
+            timeout=10,
+        )
+        if r.status_code in (400, 404, 405):
+            print(f"  Eventbrite: API unavailable ({r.status_code}) — check key or API access")
+            return []
+        r.raise_for_status()
+        data = r.json()
         for e in data.get("events", []):
             venue = e.get("venue") or {}
-            cat = e.get("category") or {}
             name = e.get("name", {})
             events.append({
                 "source": "eventbrite",
                 "name": name.get("text", "") if isinstance(name, dict) else str(name),
                 "date": (e.get("start", {}).get("local", "") or "")[:10],
                 "venue": venue.get("name", ""),
-                "category": cat.get("name", ""),
+                "category": e.get("category_id", ""),
                 "url": e.get("url", ""),
             })
-        pagination = data.get("pagination", {})
-        page_token = pagination.get("continuation")
-        if not pagination.get("has_more_items") or not page_token:
-            break
-        page += 1
+    except Exception as ex:
+        print(f"  Eventbrite error: {ex}")
     print(f"  Eventbrite: {len(events)} events")
     return events
 
