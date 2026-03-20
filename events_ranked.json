@@ -1,1 +1,1842 @@
-[]
+[
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Anaheim Ducks",
+    "date": "2026-03-20",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6Py",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Trey Kennedy",
+    "date": "2026-03-20",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7q31b",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Fiddler On The Roof",
+    "date": "2026-03-20",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ONPt",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Mens Volleyball vs. Concordia Irvine Golden Eagles Mens Volleyball",
+    "date": "2026-03-20",
+    "venue": "Smith Fieldhouse",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OUvO",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BOYS LIKE GIRLS - The Soundtrack Of Your Life Tour",
+    "date": "2026-03-20",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/boys-like-girls-the-soundtrack-of-salt-lake-city-utah-03-20-2026/event/1E006357AC613D9C",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Dead Floyd - 21+",
+    "date": "2026-03-20",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OK7p",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "The Thing w/ Mopsy",
+    "date": "2026-03-20",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-pa",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Colby Acuff w/ Danno Simpson",
+    "date": "2026-03-20",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OSOx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Jazz vs. Philadelphia 76ers",
+    "date": "2026-03-21",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_S3v",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "John Mulaney",
+    "date": "2026-03-21",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7q9r4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "John Mulaney: Mister Whatever",
+    "date": "2026-03-21",
+    "venue": "Eccles Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.live-at-the-eccles.com/events/john-mulaney",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Pete Correale: As I Was Saying",
+    "date": "2026-03-21",
+    "venue": "The Depot",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/pete-correale-as-i-was-saying-salt-lake-city-utah-03-21-2026/event/1E0062F2BFC84ECD",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Fiddler On The Roof",
+    "date": "2026-03-21",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ONPY",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Mens Volleyball vs. Concordia Irvine Golden Eagles Mens Volleyball",
+    "date": "2026-03-21",
+    "venue": "Smith Fieldhouse",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OUv-",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Big 12 Gymnastics Championships - Session 2",
+    "date": "2026-03-21",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/big-12-gymnastics-championships-session-2-west-valley-city-utah-03-21-2026/event/1E0064269C3E4695",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Big 12 Gymnastics Championships - Session 1",
+    "date": "2026-03-21",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/big-12-gymnastics-championships-session-1-west-valley-city-utah-03-21-2026/event/1E0064269C1F4687",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Dead Floyd - 21+",
+    "date": "2026-03-21",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OK79",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Dream, Ivory",
+    "date": "2026-03-21",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7qfP7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Michael McIntyre",
+    "date": "2026-03-22",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7qKJf",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Los Angeles Kings",
+    "date": "2026-03-22",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6JZ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Royals FC vs. San Diego Wave FC",
+    "date": "2026-03-22",
+    "venue": "America First Field",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OxqF",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Jazz vs. Toronto Raptors",
+    "date": "2026-03-23",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_S3e",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Bill Burr Live",
+    "date": "2026-03-23",
+    "venue": "Kingsbury Hall Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://artstickets.utah.edu/events/bill-burr/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Bill Burr",
+    "date": "2026-03-23",
+    "venue": "Kingsbury Hall",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OpuK",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Lily Seabird w/ Hemlock",
+    "date": "2026-03-23",
+    "venue": "Kilby Court",
+    "category": "Undefined",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-po",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake City Stars vs. Santa Cruz Warriors",
+    "date": "2026-03-24",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-city-stars-vs-santa-west-valley-city-utah-03-24-2026/event/1E00633DA7792A2B",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Edmonton Oilers",
+    "date": "2026-03-24",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6Jv",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-24",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. BYU Cougars Baseball",
+    "date": "2026-03-24",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PP",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Lespecial - 21+",
+    "date": "2026-03-24",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-kfK",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Jazz vs. Washington Wizards",
+    "date": "2026-03-25",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_S3d",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-25",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-25-2026/event/1E006444AEEA69DD",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-25",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJp",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Quarters w/ Porch Light",
+    "date": "2026-03-25",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-p3",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Washington Capitals",
+    "date": "2026-03-26",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6Jd",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-26",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-26-2026/event/1E006444AEED69E2",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
+    "date": "2026-03-26",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-oAy",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Allen Americans",
+    "date": "2026-03-26",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-allen-americans-west-valley-city-utah-03-26-2026/event/1E0062F889AE23C3",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-26",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ9",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "KRCL Welcomes Donavon Frankenreiter - Ask Me Anything Tour",
+    "date": "2026-03-26",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/krcl-welcomes-donavon-frankenreiter-ask-me-salt-lake-city-utah-03-26-2026/event/1E006381A4226E6A",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Ashnikko: Smoochies Tour",
+    "date": "2026-03-26",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/ashnikko-smoochies-tour-salt-lake-city-utah-03-26-2026/event/1E00632976FA0D5C",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "GRIEVES ??? OUT COLD TOUR 4\r\n 21+",
+    "date": "2026-03-26",
+    "venue": "The Urban Lounge-UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7qMvJ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Evan Honer w/ Sam Burchfield",
+    "date": "2026-03-26",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7qZv4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Eddie 9V w/ The Steel Wheels",
+    "date": "2026-03-26",
+    "venue": "The State Room",
+    "category": "Undefined",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oa_F",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-27",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-27-2026/event/1E006444AEF069E7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
+    "date": "2026-03-27",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okZ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Mens Volleyball vs. Pepperdine Waves Mens Volleyball",
+    "date": "2026-03-27",
+    "venue": "Smith Fieldhouse",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OUvx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-27",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d46",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
+    "date": "2026-03-27",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PJ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Ruel - Kicking My Feet Tour ",
+    "date": "2026-03-27",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/ruel-kicking-my-feet-tour-salt-lake-city-utah-03-27-2026/event/1E00635ED1F57C44",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Turnpike Troubadours: Wild America Tour",
+    "date": "2026-03-27",
+    "venue": "Canyon View Credit Union Stage at Maverik Center",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/turnpike-troubadours-wild-america-tour-west-valley-city-utah-03-27-2026/event/1E00636596BC5BA0",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Cat Clyde - 21+",
+    "date": "2026-03-27",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OFak",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Slaughter To Prevail: North America 2026 with Whitechapel & Attila",
+    "date": "2026-03-27",
+    "venue": "The Complex",
+    "category": "Music",
+    "url": "https://www.axs.com/events/1255442/slaughter-to-prevail-tickets",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "THE DEVIL WEARS PRADA: FLOWERS TOUR",
+    "date": "2026-03-27",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/the-devil-wears-prada-flowers-tour-salt-lake-city-utah-03-27-2026/event/1E00636CD5F09383",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Yellow Days w/ Rue Jacobs",
+    "date": "2026-03-27",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OfZ4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-28",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-28-2026/event/1E006444AEF369EE",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
+    "date": "2026-03-28",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okv",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Mens Volleyball vs. Pepperdine Waves Mens Volleyball",
+    "date": "2026-03-28",
+    "venue": "Smith Fieldhouse",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OUvN",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-28",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d4F",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
+    "date": "2026-03-28",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PE",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Jorge Medina & Josi Cuen - JUNTOS",
+    "date": "2026-03-28",
+    "venue": "Maverik Center",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/jorge-medina-josi-cuen-juntos-west-valley-city-utah-03-28-2026/event/1E00626ED67236E0",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Dinastia Tour by Peso Pluma & Tito Double P with Friends",
+    "date": "2026-03-28",
+    "venue": "Canyon View Credit Union Stage at Maverik Center",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/dinastia-tour-by-peso-pluma-tito-west-valley-city-utah-03-28-2026/event/1E00642DDA56A11C",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Machine Girl - PsychoWarrior Tour",
+    "date": "2026-03-28",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/machine-girl-psychowarrior-tour-salt-lake-city-utah-03-28-2026/event/1E006350C4846E5A",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "The Wonder Years w/ Knuckle Puck",
+    "date": "2026-03-28",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OfZ_",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "The Nude Party",
+    "date": "2026-03-28",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-kf_",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "LANY",
+    "date": "2026-03-28",
+    "venue": "Delta Center",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7qOoZ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "LAMB OF GOD: INTO OBLIVION TOUR",
+    "date": "2026-03-28",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/lamb-of-god-into-oblivion-tour-salt-lake-city-utah-03-28-2026/event/1E00636DE049AF74",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "HANNAH BERNER: NONE OF MY BUSINESS TOUR",
+    "date": "2026-03-29",
+    "venue": "Kingsbury Hall Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://artstickets.utah.edu/events/hannah-berner/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hannah Berner",
+    "date": "2026-03-29",
+    "venue": "Kingsbury Hall",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7q4fy",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Allen Americans",
+    "date": "2026-03-29",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-allen-americans-west-valley-city-utah-03-29-2026/event/1E0062F889B123C9",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Flightless Bird Live with David Farrier & Rob Holysz",
+    "date": "2026-03-29",
+    "venue": "The Depot",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/flightless-bird-live-with-david-farrier-salt-lake-city-utah-03-29-2026/event/1E00644DAA719D35",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-29",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ_",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
+    "date": "2026-03-29",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PI",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Silverada",
+    "date": "2026-03-29",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-kfp",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Dear Maryanne w/ Equipment",
+    "date": "2026-03-29",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-p9",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "West 22nd w/ Poolhouse",
+    "date": "2026-03-29",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OIZ8",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Jazz vs. Cleveland Cavaliers",
+    "date": "2026-03-30",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_S37",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Belair Lip Bombs w/ dust",
+    "date": "2026-03-30",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-pb",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Humbe",
+    "date": "2026-03-30",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/humbe-salt-lake-city-utah-03-30-2026/event/1E0063846D062D61",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Kansas State Wildcats Baseball",
+    "date": "2026-03-31",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-oke",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sacramento River Cats",
+    "date": "2026-03-31",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sacramento-river-south-jordan-utah-03-31-2026/event/1E006434E8239F8C",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Sticky Fingers - Live in North America",
+    "date": "2026-03-31",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/sticky-fingers-live-in-north-america-salt-lake-city-utah-03-31-2026/event/1E006350B0726B00",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Tom Hamilton",
+    "date": "2026-03-31",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O81Z",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Jazz vs. Denver Nuggets",
+    "date": "2026-04-01",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_S3A",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sacramento River Cats",
+    "date": "2026-04-01",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sacramento-river-south-jordan-utah-04-01-2026/event/1E006434E8299F91",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Wichita Thunder",
+    "date": "2026-04-01",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-wichita-thunder-west-valley-city-utah-04-01-2026/event/1E0062F889B323FE",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Westerman",
+    "date": "2026-04-01",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7jUkb",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Moontower",
+    "date": "2026-04-01",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-p_",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Ohgeesy",
+    "date": "2026-04-01",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-pfV",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sacramento River Cats",
+    "date": "2026-04-02",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sacramento-river-south-jordan-utah-04-02-2026/event/1E006434E82E9F97",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Escape the Fate Vip",
+    "date": "2026-04-02",
+    "venue": "The Complex",
+    "category": "Music",
+    "url": "https://www.ticketweb.com/event/escape-the-fate-vip-the-complex-tickets/14008024?REFERRAL_ID=tmfeed",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Lacuna Coil w/ Escape the Fate",
+    "date": "2026-04-02",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OK8Z",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Marissa Nadler",
+    "date": "2026-04-02",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7QZoP",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "bbno$ - The Internet Explorer Tour ",
+    "date": "2026-04-02",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/bbno-the-internet-explorer-tour-salt-lake-city-utah-04-02-2026/event/1E006313B0993056",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sacramento River Cats",
+    "date": "2026-04-03",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sacramento-river-south-jordan-utah-04-03-2026/event/1E006434E8339FA4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Wichita Thunder",
+    "date": "2026-04-03",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-wichita-thunder-west-valley-city-utah-04-03-2026/event/1E0062F889B6241A",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Royals FC vs. Chicago Stars FC",
+    "date": "2026-04-03",
+    "venue": "America First Field",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxqa",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Skullcrusher",
+    "date": "2026-04-03",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7q3Fd",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Mindchatter",
+    "date": "2026-04-03",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7reop",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sacramento River Cats",
+    "date": "2026-04-04",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sacramento-river-south-jordan-utah-04-04-2026/event/1E006434E8389FAA",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "LOVB Salt Lake City vs LOVB Madison",
+    "date": "2026-04-04",
+    "venue": "Lifetime Activities Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/lovb-salt-lake-city-vs-lovb-taylorsville-utah-04-04-2026/event/1E0063620EE9ACCB",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Wichita Thunder",
+    "date": "2026-04-04",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-wichita-thunder-west-valley-city-utah-04-04-2026/event/1E0062F889B82452",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Real Salt Lake vs. Sporting Kansas City",
+    "date": "2026-04-04",
+    "venue": "America First Field",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7r8Jf",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "The Summer Set",
+    "date": "2026-04-04",
+    "venue": "Soundwell",
+    "category": "Music",
+    "url": "https://tixr.com/e/163197",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Caroline Jones",
+    "date": "2026-04-04",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O8as",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Carly Cosgrove",
+    "date": "2026-04-04",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-bZ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sacramento River Cats",
+    "date": "2026-04-05",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sacramento-river-south-jordan-utah-04-05-2026/event/1E006434E83D9FAD",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Charlie Parr",
+    "date": "2026-04-05",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oob_",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Erra w/ Currents",
+    "date": "2026-04-05",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O3ap",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Orbit Culture w/ Ov Sulfur",
+    "date": "2026-04-05",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7rvfN",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Calum Scott - The Avenoir Tour 2026",
+    "date": "2026-04-06",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/calum-scott-the-avenoir-tour-2026-salt-lake-city-utah-04-06-2026/event/1E006283DC6D57C4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Together Pangea + The Red Pear",
+    "date": "2026-04-06",
+    "venue": "The Complex",
+    "category": "Music",
+    "url": "https://www.axs.com/events/1286636/together-pangea-the-red-pears-tickets",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Vanessa Collier",
+    "date": "2026-04-06",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OYpb",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Microwave",
+    "date": "2026-04-06",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oa0_",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Idaho Steelheads",
+    "date": "2026-04-07",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-idaho-steelheads-west-valley-city-utah-04-07-2026/event/1E0062F889EB2637",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Edmonton Oilers",
+    "date": "2026-04-07",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6Je",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "HEALTH x CARPENTER BRUT",
+    "date": "2026-04-07",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/health-x-carpenter-brut-salt-lake-city-utah-04-07-2026/event/1E006332835F1A2B",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Al Olender",
+    "date": "2026-04-07",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-be",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Devo",
+    "date": "2026-04-07",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oa0k",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-08",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZv",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Midnight Til Morning",
+    "date": "2026-04-08",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OfvK",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "The Garden",
+    "date": "2026-04-08",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OUOM",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Rochelle Jordan",
+    "date": "2026-04-08",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-bA",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Nashville Predators",
+    "date": "2026-04-09",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6J7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-09",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZ7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hinder",
+    "date": "2026-04-09",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-Zjd",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Sweet Pill w/ Heart to Gold",
+    "date": "2026-04-09",
+    "venue": "Kilby Court",
+    "category": "Undefined",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-bk",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Mens Volleyball vs. USC Trojans Mens Volleyball",
+    "date": "2026-04-10",
+    "venue": "Smith Fieldhouse",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OUv0",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Rapid City Rush",
+    "date": "2026-04-10",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-rapid-city-rush-west-valley-city-utah-04-10-2026/event/1E0062F889BD24A1",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Jazz vs. Memphis Grizzlies",
+    "date": "2026-04-10",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_S3k",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-10",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZd",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Winyah",
+    "date": "2026-04-10",
+    "venue": "Kilby Court",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-b6",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Mother Hips",
+    "date": "2026-04-10",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OIOx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Gimme Gimme Disco",
+    "date": "2026-04-10",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OOvM",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Mens Volleyball vs. USC Trojans Mens Volleyball",
+    "date": "2026-04-11",
+    "venue": "Smith Fieldhouse",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OUvP",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Rapid City Rush",
+    "date": "2026-04-11",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-rapid-city-rush-west-valley-city-utah-04-11-2026/event/1E0062F889BF24AC",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Carolina Hurricanes",
+    "date": "2026-04-11",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6JA",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-11",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZA",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah PTA Battle of the Bands",
+    "date": "2026-04-11",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/utah-pta-battle-of-the-bands-salt-lake-city-utah-04-11-2026/event/1E006463CC43A4E7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "AfroHouse Experience Hosted By Afroparadigm",
+    "date": "2026-04-11",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/afrohouse-experience-hosted-by-afroparadigm-salt-lake-city-utah-04-11-2026/event/1E006449AC245EA0",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "The Format",
+    "date": "2026-04-11",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/the-format-salt-lake-city-utah-04-11-2026/event/1E006342B8EB50BA",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Mother Hips",
+    "date": "2026-04-11",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OIqN",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "RATBOYS - 21+",
+    "date": "2026-04-11",
+    "venue": "The Urban Lounge-UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7jEfd",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Tommy Emmanuel, CGP",
+    "date": "2026-04-11",
+    "venue": "Kingsbury Hall Salt Lake City",
+    "category": "Music",
+    "url": "https://artstickets.utah.edu/?p=8416&preview=true",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Tommy Emmanuel",
+    "date": "2026-04-11",
+    "venue": "Kingsbury Hall",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7p70P",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Che",
+    "date": "2026-04-11",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-44O",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Lily Rose",
+    "date": "2026-04-11",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OwFa",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Grizzlies vs. Rapid City Rush",
+    "date": "2026-04-12",
+    "venue": "Maverik Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/utah-grizzlies-vs-rapid-city-rush-west-valley-city-utah-04-12-2026/event/1E0062F889BA247D",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-12",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZ6",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Journey",
+    "date": "2026-04-12",
+    "venue": "Delta Center",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7qgA6",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Animals As Leaders",
+    "date": "2026-04-12",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/animals-as-leaders-salt-lake-city-utah-04-12-2026/event/1E00643CD66F9D69",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Freddie Dredd w/ Germ",
+    "date": "2026-04-12",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-po7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Wizard Of Oz",
+    "date": "2026-04-13",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-bQ6",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Courtney Marie Andrews",
+    "date": "2026-04-13",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7r4_E",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Wizard Of Oz",
+    "date": "2026-04-14",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-bQF",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sugar Land Space Cowboys",
+    "date": "2026-04-14",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sugar-land-south-jordan-utah-04-14-2026/event/1E006434E8429FB4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. Winnipeg Jets",
+    "date": "2026-04-14",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6Jk",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-14",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZa",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Bloodywood: System Of A Brown Tour 2026",
+    "date": "2026-04-14",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/bloodywood-system-of-a-brown-tour-salt-lake-city-utah-04-14-2026/event/1E0063829B106A95",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sugar Land Space Cowboys",
+    "date": "2026-04-15",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sugar-land-south-jordan-utah-04-15-2026/event/1E006434E8479FB8",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-15",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZ8",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Warren Zeiders: Relapse, Lies, and Betrayal Tour",
+    "date": "2026-04-15",
+    "venue": "Canyon View Credit Union Stage at Maverik Center",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/warren-zeiders-relapse-lies-and-betrayal-west-valley-city-utah-04-15-2026/event/1E00626BD66E2673",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Jon McLaughlin",
+    "date": "2026-04-15",
+    "venue": "The State Room",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OIqp",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Insane Clown Posse",
+    "date": "2026-04-15",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-fJ4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Wizard Of Oz",
+    "date": "2026-04-16",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-bQa",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Arizona State Sun Devils Baseball",
+    "date": "2026-04-16",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okd",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sugar Land Space Cowboys",
+    "date": "2026-04-16",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sugar-land-south-jordan-utah-04-16-2026/event/1E006434E84D9FBF",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Mammoth vs. St. Louis Blues",
+    "date": "2026-04-16",
+    "venue": "Delta Center",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7_6J6",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-16",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZo",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Maddox Batson",
+    "date": "2026-04-16",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7r9vx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Wizard Of Oz",
+    "date": "2026-04-17",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-bQ8",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Arizona State Sun Devils Baseball",
+    "date": "2026-04-17",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-ok7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sugar Land Space Cowboys",
+    "date": "2026-04-17",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sugar-land-south-jordan-utah-04-17-2026/event/1E006434E8529FC5",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-17",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZ3",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
+    "date": "2026-04-17",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9Pt",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Emo Night Brooklyn",
+    "date": "2026-04-17",
+    "venue": "The Complex - UT",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7--Az",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Wizard Of Oz",
+    "date": "2026-04-18",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-bQ3",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Arizona State Sun Devils Baseball",
+    "date": "2026-04-18",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okA",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Salt Lake Bees vs. Sugar Land Space Cowboys",
+    "date": "2026-04-18",
+    "venue": "The Ballpark at America First Square",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/salt-lake-bees-vs-sugar-land-south-jordan-utah-04-18-2026/event/1E006434E8579FCA",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Real Salt Lake vs. San Diego FC",
+    "date": "2026-04-18",
+    "venue": "America First Field",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7r8J4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-18",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZK",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
+    "date": "2026-04-18",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PY",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Cory Wong - Lost in the Wonder",
+    "date": "2026-04-18",
+    "venue": "The Depot",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/cory-wong-lost-in-the-wonder-salt-lake-city-utah-04-18-2026/event/1E00636CFA50C901",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Bilmuri - Kinda Hard Tour",
+    "date": "2026-04-18",
+    "venue": "The Union",
+    "category": "Music",
+    "url": "https://www.ticketmaster.com/bilmuri-kinda-hard-tour-salt-lake-city-utah-04-18-2026/event/1E00638478613D28",
+    "score": 0,
+    "reason": ""
+  }
+]
