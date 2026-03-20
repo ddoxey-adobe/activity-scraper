@@ -61,47 +61,49 @@ def fetch_eventbrite() -> list[dict]:
         return []
     headers = {"Authorization": f"Bearer {key}"}
     events = []
-    # New Eventbrite API: search by organizer's local events using location
-    url = "https://www.eventbriteapi.com/v3/events/search/"
-    continuation = None
+    # Eventbrite v3 search endpoint
+    params = {
+        "location.latitude": LAT,
+        "location.longitude": LNG,
+        "location.within": f"{RADIUS_MILES}mi",
+        "start_date.range_start": NOW.strftime(FMT),
+        "start_date.range_end": END.strftime(FMT),
+        "expand": "venue,category",
+        "page_size": 50,
+    }
+    page_token = None
     page = 0
     while page < 5:
-        params = {
-            "location.latitude": LAT,
-            "location.longitude": LNG,
-            "location.within": f"{RADIUS_MILES}mi",
-            "start_date.range_start": NOW.strftime(FMT),
-            "start_date.range_end": END.strftime(FMT),
-            "expand": "venue,category",
-            "page_size": 50,
-        }
-        if continuation:
-            params["continuation"] = continuation
+        if page_token:
+            params["continuation"] = page_token
         try:
-            r = requests.get(url, headers=headers, params=params, timeout=10)
-            if r.status_code == 404:
-                # Try alternate endpoint
-                url = "https://www.eventbriteapi.com/v3/destination/search/"
-                r = requests.get(url, headers=headers, params=params, timeout=10)
+            r = requests.get(
+                "https://www.eventbriteapi.com/v3/events/search/",
+                headers=headers, params=params, timeout=10
+            )
+            if r.status_code in (404, 405):
+                print(f"  Eventbrite: API endpoint unavailable ({r.status_code}), skipping")
+                break
             r.raise_for_status()
             data = r.json()
         except Exception as ex:
             print(f"  Eventbrite error: {ex}")
             break
-        for e in data.get("events", {}).get("results", data.get("events", [])):
+        for e in data.get("events", []):
             venue = e.get("venue") or {}
             cat = e.get("category") or {}
+            name = e.get("name", {})
             events.append({
                 "source": "eventbrite",
-                "name": e.get("name", {}).get("text", "") if isinstance(e.get("name"), dict) else e.get("name", ""),
+                "name": name.get("text", "") if isinstance(name, dict) else str(name),
                 "date": (e.get("start", {}).get("local", "") or "")[:10],
                 "venue": venue.get("name", ""),
-                "category": cat.get("name", e.get("category_id", "")),
+                "category": cat.get("name", ""),
                 "url": e.get("url", ""),
             })
-        pagination = data.get("pagination", data.get("events", {}).get("pagination", {}))
-        continuation = pagination.get("continuation")
-        if not pagination.get("has_more_items") and not continuation:
+        pagination = data.get("pagination", {})
+        page_token = pagination.get("continuation")
+        if not pagination.get("has_more_items") or not page_token:
             break
         page += 1
     print(f"  Eventbrite: {len(events)} events")
