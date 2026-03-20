@@ -194,40 +194,48 @@ def fetch_utah_motorsports() -> list[dict]:
 
 # ── University Event Calendars ────────────────────────────────────────────────
 def fetch_byu_events() -> list[dict]:
-    """BYU iCal export — proper line unfolding for multi-line fields."""
+    """BYU iCal export blocks scrapers — parse HTML calendar page instead."""
     events = []
-    feeds = [
-        ("https://calendar.byu.edu/iCal/Export/9", "Arts & Entertainment"),
-        ("https://calendar.byu.edu/iCal/Export/2", "Sports"),
+    pages = [
+        ("https://calendar.byu.edu/arts-entertainment", "Arts & Entertainment"),
+        ("https://calendar.byu.edu/athletics",          "Sports"),
     ]
-    for feed_url, category in feeds:
-        try:
-            r = requests.get(feed_url, headers=HEADERS, timeout=10)
-            r.raise_for_status()
-            content = r.text
-            for block in content.split("BEGIN:VEVENT")[1:]:
-                # Unfold wrapped lines (RFC 5545 line folding)
-                block = re.sub(r'\r?\n[ \t]', '', block)
-                def get_field(field, b=block):
-                    m = re.search(rf'^{field}[;:][^\r\n]*', b, re.MULTILINE)
-                    return m.group(0).split(":", 1)[-1].strip() if m else ""
-                name = get_field("SUMMARY")
-                dtstart = get_field("DTSTART")[:8]
-                url = get_field("URL")
-                if not name or not dtstart:
-                    continue
+    for page_url, category in pages:
+        soup = _get(page_url)
+        if not soup:
+            continue
+        # Events are in data-content-type="event" containers
+        # Title is in h3 links, date is in the surrounding text
+        for item in soup.select("[data-content-type='event'], .event-card, article"):
+            name = item.select_one("h2, h3, h4, a")
+            date_text = item.get_text(" ", strip=True)
+            link = item.select_one("a")
+            if not name:
+                continue
+            name_str = name.get_text(strip=True)
+            if not name_str or len(name_str) < 3:
+                continue
+            url = link["href"] if link and link.get("href") else page_url
+            # Extract date like "Saturday, March 14" from surrounding text
+            date = ""
+            match = re.search(
+                r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})',
+                date_text)
+            if match:
                 try:
-                    date = datetime.strptime(dtstart, "%Y%m%d").strftime("%Y-%m-%d")
+                    date = datetime.strptime(
+                        f"{match.group(1)} {match.group(2)} 2026", "%B %d %Y"
+                    ).strftime("%Y-%m-%d")
                 except ValueError:
-                    continue
-                events.append({"source": "byu", "name": name, "date": date,
-                                "venue": "Brigham Young University, Provo",
-                                "category": category,
-                                "url": url or "https://calendar.byu.edu/arts-entertainment"})
-        except Exception as ex:
-            print(f"    BYU feed error: {ex}")
-    print(f"    BYU Events: {len(events)} events")
-    return events
+                    pass
+            events.append({"source": "byu", "name": name_str, "date": date,
+                           "venue": "Brigham Young University, Provo",
+                           "category": category, "url": url})
+    # Deduplicate by name
+    seen = set()
+    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
+    print(f"    BYU Events: {len(unique)} events")
+    return unique
 
 
 def fetch_slcc_events() -> list[dict]:
