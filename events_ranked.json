@@ -401,21 +401,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Utah Utes Baseball vs. BYU Cougars Baseball",
-    "date": "2026-03-24",
-    "venue": "America First Ballpark",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PP",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Hadestown (Touring)",
     "date": "2026-03-24",
     "venue": "Eccles Theater - Salt Lake City",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ4",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. BYU Cougars Baseball",
+    "date": "2026-03-24",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PP",
     "score": 0,
     "reason": ""
   },
@@ -501,21 +501,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
-    "date": "2026-03-26",
-    "venue": "Miller Park at BYU",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-oAy",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Disney's High School Musical Jr",
     "date": "2026-03-26",
     "venue": "The Theater at Mount Jordan",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-26-2026/event/1E006444AEED69E2",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
+    "date": "2026-03-26",
+    "venue": "Miller Park at BYU",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-oAy",
     "score": 0,
     "reason": ""
   },
@@ -601,6 +601,16 @@
   },
   {
     "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-27",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-27-2026/event/1E006444AEF069E7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
     "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
     "date": "2026-03-27",
     "venue": "Miller Park at BYU",
@@ -621,11 +631,11 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Disney's High School Musical Jr",
+    "name": "Hadestown (Touring)",
     "date": "2026-03-27",
-    "venue": "The Theater at Mount Jordan",
+    "venue": "Eccles Theater - Salt Lake City",
     "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-27-2026/event/1E006444AEF069E7",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d46",
     "score": 0,
     "reason": ""
   },
@@ -636,16 +646,6 @@
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PJ",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
-    "name": "Hadestown (Touring)",
-    "date": "2026-03-27",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d46",
     "score": 0,
     "reason": ""
   },
@@ -711,6 +711,16 @@
   },
   {
     "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-28",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-28-2026/event/1E006444AEF369EE",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
     "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
     "date": "2026-03-28",
     "venue": "Miller Park at BYU",
@@ -731,11 +741,11 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Disney's High School Musical Jr",
+    "name": "Hadestown (Touring)",
     "date": "2026-03-28",
-    "venue": "The Theater at Mount Jordan",
+    "venue": "Eccles Theater - Salt Lake City",
     "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-28-2026/event/1E006444AEF369EE",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d4F",
     "score": 0,
     "reason": ""
   },
@@ -746,16 +756,6 @@
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PE",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
-    "name": "Hadestown (Touring)",
-    "date": "2026-03-28",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d4F",
     "score": 0,
     "reason": ""
   },
@@ -891,21 +891,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
-    "date": "2026-03-29",
-    "venue": "America First Ballpark",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PI",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Hadestown (Touring)",
     "date": "2026-03-29",
     "venue": "Eccles Theater - Salt Lake City",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ_",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
+    "date": "2026-03-29",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PI",
     "score": 0,
     "reason": ""
   },
@@ -2021,21 +2021,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
-    "date": "2026-04-17",
-    "venue": "America First Ballpark",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9Pt",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Phantom Of The Opera (Touring)",
     "date": "2026-04-17",
     "venue": "Eccles Theater - Salt Lake City",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZ3",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
+    "date": "2026-04-17",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9Pt",
     "score": 0,
     "reason": ""
   },
@@ -2101,21 +2101,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
-    "date": "2026-04-18",
-    "venue": "America First Ballpark",
-    "category": "Sports",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PY",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Phantom Of The Opera (Touring)",
     "date": "2026-04-18",
     "venue": "Eccles Theater - Salt Lake City",
     "category": "Arts & Theatre",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZK",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
+    "date": "2026-04-18",
+    "venue": "America First Ballpark",
+    "category": "Sports",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PY",
     "score": 0,
     "reason": ""
   },
@@ -2281,11 +2281,11 @@
   },
   {
     "source": "covey_center",
-    "name": "Covey Center for the Arts",
+    "name": "Support",
     "date": "2026-05-23",
     "venue": "Covey Center for the Arts",
     "category": "Arts & Theater",
-    "url": "https://www.provo.gov/185/Covey-Center-for-the-Arts",
+    "url": "https://www.provo.gov/1089/Support",
     "score": 0,
     "reason": ""
   },
@@ -2306,16 +2306,6 @@
     "venue": "Soldier Hollow, Heber Valley, UT",
     "category": "Community",
     "url": "https://soldierhollowclassic.com/2026-tickets/",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Tad Calcara & The New Deal Swing Band",
-    "date": "2026-05-25",
-    "venue": "Covey Center for the Arts",
-    "category": "Music",
-    "url": "https://www.provo.gov/Calendar.aspx?EID=1789",
     "score": 0,
     "reason": ""
   },
@@ -3020,16 +3010,6 @@
     "reason": ""
   },
   {
-    "source": "utah_stadium",
-    "name": "All Events",
-    "date": "",
-    "venue": "Rice-Eccles Stadium, Salt Lake City",
-    "category": "Sports",
-    "url": "https://www.stadium.utah.edu/events/monster-energy-ama-supercross-part-of-the-monster-energy-smx-world-championship/",
-    "score": 0,
-    "reason": ""
-  },
-  {
     "source": "covey_center",
     "name": "Phat Cat Swinger",
     "date": "",
@@ -3046,106 +3026,6 @@
     "venue": "Covey Center for the Arts",
     "category": "Arts & Theater",
     "url": "https://www.provo.gov/1196/Absolute-Adele",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Departments and Divisions",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/178/Departments-and-Divisions",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Parks & Recreation",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/184/Parks-Recreation",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "MAY/JUNE",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/calendar.aspx?CID=53",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Absolute Adele with Jennifer Cella",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/1196/Absolute-Adele",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "(801) 852-7007",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "tel:8018527007",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "(801) 852-6000",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "tel:801-852-6000",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Quick Links",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/QuickLinks.aspx?CID=15",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Notifications",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/list.aspx",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Report an Issue",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/215/Report-An-Issue",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Site Links",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Arts & Theater",
-    "url": "https://www.provo.gov/QuickLinks.aspx?CID=16",
     "score": 0,
     "reason": ""
   },
@@ -3171,26 +3051,6 @@
   },
   {
     "source": "covey_center",
-    "name": "Summer Band Series",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Music",
-    "url": "https://www.provo.gov/1345/2026-Summer-Band-Series",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "You've Got a Friend: The Songs of Carole King & James Taylor",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Music",
-    "url": "https://www.provo.gov/1228/Youve-Got-A-Friend-The-Songs-of-Carole-K",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
     "name": "A Little Murder Never Hurt Anybody",
     "date": "",
     "venue": "Covey Center for the Arts",
@@ -3206,46 +3066,6 @@
     "venue": "Covey Center for the Arts",
     "category": "Theater",
     "url": "https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "\"Soundsation\" Percussive Footwork Concert",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Community",
-    "url": "https://covey.provo.gov/ChooseSeats/63601",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "BYU Noteworthy & Vocal Point",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Community",
-    "url": "https://covey.provo.gov/EventAvailability?EventId=21401&ref=bookNow&scroll=timeAndDates",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "The Best is Yet to Come",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Community",
-    "url": "https://covey.provo.gov/ChooseSeats/66401",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "covey_center",
-    "name": "Swan Lake & Tap Vibes",
-    "date": "",
-    "venue": "Covey Center for the Arts",
-    "category": "Community",
-    "url": "https://covey.provo.gov/EventAvailability?EventId=28201&ref=bookNow&scroll=timeAndDates",
     "score": 0,
     "reason": ""
   },
