@@ -20,6 +20,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Greased",
+    "date": "2026-01-08",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "the_ruth",
     "name": "Fiddler on the Roof",
     "date": "2026-01-30",
@@ -200,6 +210,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-03-20",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Utah Jazz vs. Philadelphia 76ers",
     "date": "2026-03-21",
@@ -310,6 +330,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-03-21",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Michael McIntyre",
     "date": "2026-03-22",
@@ -401,21 +431,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Hadestown (Touring)",
-    "date": "2026-03-24",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ4",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Utah Utes Baseball vs. BYU Cougars Baseball",
     "date": "2026-03-24",
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PP",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-24",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ4",
     "score": 0,
     "reason": ""
   },
@@ -501,21 +531,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Disney's High School Musical Jr",
-    "date": "2026-03-26",
-    "venue": "The Theater at Mount Jordan",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-26-2026/event/1E006444AEED69E2",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
     "date": "2026-03-26",
     "venue": "Miller Park at BYU",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-oAy",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-26",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-26-2026/event/1E006444AEED69E2",
     "score": 0,
     "reason": ""
   },
@@ -601,21 +631,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Disney's High School Musical Jr",
-    "date": "2026-03-27",
-    "venue": "The Theater at Mount Jordan",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-27-2026/event/1E006444AEF069E7",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "BYU Cougars Baseball vs. Oklahoma State Cowboys Baseball",
     "date": "2026-03-27",
     "venue": "Miller Park at BYU",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-okZ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-27",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-27-2026/event/1E006444AEF069E7",
     "score": 0,
     "reason": ""
   },
@@ -631,21 +661,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Hadestown (Touring)",
-    "date": "2026-03-27",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d46",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
     "date": "2026-03-27",
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PJ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-27",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d46",
     "score": 0,
     "reason": ""
   },
@@ -710,12 +740,12 @@
     "reason": ""
   },
   {
-    "source": "ticketmaster",
-    "name": "Disney's High School Musical Jr",
-    "date": "2026-03-28",
-    "venue": "The Theater at Mount Jordan",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-28-2026/event/1E006444AEF369EE",
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-03-27",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
     "score": 0,
     "reason": ""
   },
@@ -731,6 +761,16 @@
   },
   {
     "source": "ticketmaster",
+    "name": "Disney's High School Musical Jr",
+    "date": "2026-03-28",
+    "venue": "The Theater at Mount Jordan",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/disneys-high-school-musical-jr-sandy-utah-03-28-2026/event/1E006444AEF369EE",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
     "name": "BYU Cougars Mens Volleyball vs. Pepperdine Waves Mens Volleyball",
     "date": "2026-03-28",
     "venue": "Smith Fieldhouse",
@@ -741,21 +781,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Hadestown (Touring)",
-    "date": "2026-03-28",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d4F",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
     "date": "2026-03-28",
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PE",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-28",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74d4F",
     "score": 0,
     "reason": ""
   },
@@ -850,6 +890,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-03-28",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "HANNAH BERNER: NONE OF MY BUSINESS TOUR",
     "date": "2026-03-29",
@@ -891,21 +941,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Hadestown (Touring)",
-    "date": "2026-03-29",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ_",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Utah Utes Baseball vs. Kansas State Wildcats Baseball",
     "date": "2026-03-29",
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PI",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Hadestown (Touring)",
+    "date": "2026-03-29",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A74yJ_",
     "score": 0,
     "reason": ""
   },
@@ -1130,6 +1180,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: The Princess Bride",
+    "date": "2026-04-02",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Salt Lake Bees vs. Sacramento River Cats",
     "date": "2026-04-03",
@@ -1200,6 +1260,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-04-03",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Salt Lake Bees vs. Sacramento River Cats",
     "date": "2026-04-04",
@@ -1266,6 +1336,16 @@
     "venue": "Kilby Court",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-bZ",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-04-04",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
     "score": 0,
     "reason": ""
   },
@@ -1590,6 +1670,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-04-10",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "BYU Cougars Mens Volleyball vs. USC Trojans Mens Volleyball",
     "date": "2026-04-11",
@@ -1736,6 +1826,16 @@
     "venue": "Utah Motorsports Campus, Tooele",
     "category": "Sports",
     "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-04-11",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
     "score": 0,
     "reason": ""
   },
@@ -2021,21 +2121,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Phantom Of The Opera (Touring)",
-    "date": "2026-04-17",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZ3",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
     "date": "2026-04-17",
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9Pt",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-17",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZ3",
     "score": 0,
     "reason": ""
   },
@@ -2056,6 +2156,16 @@
     "venue": "Abravanel Hall",
     "category": "Music",
     "url": "https://usuo.org/schedule/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-04-17",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
     "score": 0,
     "reason": ""
   },
@@ -2101,21 +2211,21 @@
   },
   {
     "source": "ticketmaster",
-    "name": "Phantom Of The Opera (Touring)",
-    "date": "2026-04-18",
-    "venue": "Eccles Theater - Salt Lake City",
-    "category": "Arts & Theatre",
-    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZK",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster",
     "name": "Utah Utes Baseball vs. Texas Tech Red Raiders Baseball",
     "date": "2026-04-18",
     "venue": "America First Ballpark",
     "category": "Sports",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-9PY",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ticketmaster",
+    "name": "Phantom Of The Opera (Touring)",
+    "date": "2026-04-18",
+    "venue": "Eccles Theater - Salt Lake City",
+    "category": "Arts & Theatre",
+    "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7pZZK",
     "score": 0,
     "reason": ""
   },
@@ -2136,6 +2246,16 @@
     "venue": "The Union",
     "category": "Music",
     "url": "https://www.ticketmaster.com/bilmuri-kinda-hard-tour-salt-lake-city-utah-04-18-2026/event/1E00638478613D28",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "obt",
+    "name": "OBT: Laughing Stock Improv Comedy",
+    "date": "2026-04-18",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
     "score": 0,
     "reason": ""
   },
@@ -2376,6 +2496,16 @@
     "venue": "Desert Star Playhouse, Murray",
     "category": "Comedy",
     "url": "https://desertstarplayhouse.com/2026-season/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "obt",
+    "name": "OBT: Big Bang Parody",
+    "date": "2026-06-11",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
     "score": 0,
     "reason": ""
   },
@@ -2770,6 +2900,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Scooby-Doo Parody",
+    "date": "2026-08-27",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "Thanksgiving Point Farmers Market",
     "date": "2026-08-27",
@@ -2990,6 +3130,16 @@
     "reason": ""
   },
   {
+    "source": "obt",
+    "name": "OBT: Nutcracker Parody",
+    "date": "2026-11-12",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "the_ruth",
     "name": "A Christmas Carol",
     "date": "2026-12-04",
@@ -3066,16 +3216,6 @@
     "venue": "Covey Center for the Arts",
     "category": "Theater",
     "url": "https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "obt",
-    "name": "OBT: 2026 Season",
-    "date": "",
-    "venue": "The Off Broadway Theatre",
-    "category": "Comedy",
-    "url": "https://www.theobt.org/box-office",
     "score": 0,
     "reason": ""
   },
