@@ -761,6 +761,7 @@ def fetch_google_events() -> list[dict]:
         "comedy show Salt Lake City",
         "theater Salt Lake City",
         "jazz Salt Lake City",
+        "site:eventbrite.com events Salt Lake City Utah",
     ]
     for q in queries:
         events += _serpapi(q, api_key, "", "Event", "")
