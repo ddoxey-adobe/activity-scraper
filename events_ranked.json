@@ -10,6 +10,46 @@
     "reason": ""
   },
   {
+    "source": "slcc",
+    "name": "Westminster Transfer Admissions Tabling",
+    "date": "2025-09-08",
+    "venue": "Academic & Administration Building (AAB)",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Connect U - University of Utah Transfer Resources",
+    "date": "2025-09-09",
+    "venue": "Academic & Administration Building (AAB)",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Utah State Transfer Admissions Tabling",
+    "date": "2025-09-30",
+    "venue": "Science Industries Building (SI)",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "UVU Transfer Admissions Advising",
+    "date": "2025-12-02",
+    "venue": "South City Main Building",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "desert_star",
     "name": "Greased: Happy Days Are Here Again",
     "date": "2026-01-08",
@@ -30,6 +70,26 @@
     "reason": ""
   },
   {
+    "source": "slcc",
+    "name": "Massage Monday",
+    "date": "2026-01-12",
+    "venue": "Redwood Campus",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Life on the Spectrum group",
+    "date": "2026-01-13",
+    "venue": "Redwood Campus",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "the_ruth",
     "name": "Fiddler on the Roof",
     "date": "2026-01-30",
@@ -40,12 +100,52 @@
     "reason": ""
   },
   {
+    "source": "slcc",
+    "name": "Stepping On Workshop",
+    "date": "2026-02-19",
+    "venue": "Jordan Campus",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "4 Common Corners: Hidden Life exhibition ",
+    "date": "2026-02-26",
+    "venue": "Center for Arts & Media",
+    "category": "Arts & Theater",
+    "url": "slcc.edu/gallery",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Threads of Labor: An Exhibit on Workwear Throughout History",
+    "date": "2026-03-02",
+    "venue": "Markosian Library",
+    "category": "Arts & Theater",
+    "url": "https://www.slcc.edu/fashion/index.aspx",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "scera_shell",
     "name": "HADESTOWN TEEN EDITION",
     "date": "2026-03-13",
     "venue": "SCERA Shell Outdoor Theatre",
     "category": "Arts & Theater",
     "url": "https://scera.org/events/hadestown-teen-edition/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Smart Cents Workshop Series",
+    "date": "2026-03-17",
+    "venue": "STC",
+    "category": "Arts & Theater",
+    "url": "https://slcc.edu/deanofstudents/financial-wellbeing-program/index.aspx",
     "score": 0,
     "reason": ""
   },
@@ -126,6 +226,16 @@
     "venue": "The Complex - UT",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OSOx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Focus and Learn Day: AI Expo",
+    "date": "2026-03-20",
+    "venue": "Professional Development Center",
+    "category": "Arts & Theater",
+    "url": "https://i.slcc.edu/development-catalog/Trainings/ai-expo.aspx",
     "score": 0,
     "reason": ""
   },
@@ -470,6 +580,46 @@
     "reason": ""
   },
   {
+    "source": "slcc",
+    "name": "Reel Time - Mufasa",
+    "date": "2026-03-24",
+    "venue": "Westpointe Campus",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "March SLCCServes: Create Sensory Kits with Encircle Utah",
+    "date": "2026-03-24",
+    "venue": "Redwood Campus",
+    "category": "Arts & Theater",
+    "url": "https://cglink.me/2gn/r2262337",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "(FREE Tickets) SLC Stars Basketball w/SLCC Stars Dancers ",
+    "date": "2026-03-24",
+    "venue": "Maverik Center",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "SACM Free Film Series: RESERVOIR DOGS",
+    "date": "2026-03-24",
+    "venue": "South City Campus",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Utah Jazz vs. Washington Wizards",
     "date": "2026-03-25",
@@ -506,6 +656,26 @@
     "venue": "Kilby Court",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-p3",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Health Fair",
+    "date": "2026-03-25",
+    "venue": "",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Reel Time - Sonic 3",
+    "date": "2026-03-25",
+    "venue": "Herriman Campus",
+    "category": "Arts & Theater",
+    "url": "",
     "score": 0,
     "reason": ""
   },
@@ -626,6 +796,36 @@
     "venue": "Velour Live Music Gallery, Provo",
     "category": "Music",
     "url": "https://velourlive.com/openmic",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "SkillsUSA State Conference",
+    "date": "2026-03-26",
+    "venue": "Multiple campuses - please see YappApp for up to date schedule",
+    "category": "Arts & Theater",
+    "url": "YappApp",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Big Questions Forum Student Lunch w/ ALOK",
+    "date": "2026-03-26",
+    "venue": "4600 South Redwood Road",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Student Art Showcase",
+    "date": "2026-03-26",
+    "venue": "SLCC South City Campus",
+    "category": "Arts & Theater",
+    "url": "",
     "score": 0,
     "reason": ""
   },
@@ -1020,6 +1220,16 @@
     "reason": ""
   },
   {
+    "source": "slcc",
+    "name": "Fluff 'N' Stuff",
+    "date": "2026-03-30",
+    "venue": "Taylorsville Redwood Campus",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "BYU Cougars Baseball vs. Kansas State Wildcats Baseball",
     "date": "2026-03-31",
@@ -1056,6 +1266,16 @@
     "venue": "The State Room",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O81Z",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Free Film Series: CLERKS",
+    "date": "2026-03-31",
+    "venue": "South City Campus",
+    "category": "Arts & Theater",
+    "url": "",
     "score": 0,
     "reason": ""
   },
@@ -1116,6 +1336,26 @@
     "venue": "The Complex - UT",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-pfV",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Wellness Wednesday",
+    "date": "2026-04-01",
+    "venue": "",
+    "category": "Arts & Theater",
+    "url": "",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Free Film Series: HEARTS OF DARKNESS: A FILMMAKER'S APOCALYPSE",
+    "date": "2026-04-01",
+    "venue": "South City Campus",
+    "category": "Arts & Theater",
+    "url": "",
     "score": 0,
     "reason": ""
   },
@@ -1246,6 +1486,16 @@
     "venue": "Kilby Court",
     "category": "Music",
     "url": "https://www.ticketmaster.com/lamb-of-god-into-oblivion-tour-san-francisco-california-04-03-2026/event/1C00636EC16ADD9B",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "Drag Show",
+    "date": "2026-04-03",
+    "venue": "South City Campus",
+    "category": "Arts & Theater",
+    "url": "",
     "score": 0,
     "reason": ""
   },
@@ -1446,6 +1696,16 @@
     "venue": "Kilby Court",
     "category": "Music",
     "url": "https://www.ticketmaster.com/sticky-fingers-live-in-north-america-san-francisco-california-04-06-2026/event/1C00634CE6969C72",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "slcc",
+    "name": "FREE EVENT - Celebrate the Arts @ SLCC",
+    "date": "2026-04-06",
+    "venue": "Taylorsville Redwood Campus",
+    "category": "Arts & Theater",
+    "url": "",
     "score": 0,
     "reason": ""
   },
