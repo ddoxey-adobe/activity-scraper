@@ -1,2 +1,3 @@
-anthropic>=0.25.0
+anthropic[bedrock]>=0.25.0
 requests>=2.31.0
+boto3>=1.34.0
