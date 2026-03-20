@@ -307,6 +307,8 @@ def fetch_utah_university_events() -> list[dict]:
 
 def fetch_utah_stadium_events() -> list[dict]:
     events = []
+    skip = {"filter events", "all events", "submit an event", "home", "search",
+            "sign in", "contact", "about", "calendar policies"}
     soup = _get("https://www.stadium.utah.edu/all-events/")
     if soup:
         for item in soup.select("article, .event, .tribe-event"):
@@ -315,8 +317,11 @@ def fetch_utah_stadium_events() -> list[dict]:
             link = item.select_one("a")
             if not name:
                 continue
+            name_text = name.get_text(strip=True)
+            if not name_text or len(name_text) < 5 or name_text.lower() in skip:
+                continue
             url = link["href"] if link and link.get("href") else "https://www.stadium.utah.edu/all-events/"
-            events.append({"source": "utah_stadium", "name": name.get_text(strip=True),
+            events.append({"source": "utah_stadium", "name": name_text,
                            "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
                            "venue": "Rice-Eccles Stadium, Salt Lake City",
                            "category": "Sports", "url": url})
@@ -452,48 +457,88 @@ def fetch_soldier_hollow() -> list[dict]:
 
 # ── Covey Center for the Arts ─────────────────────────────────────────────────
 def fetch_covey_center() -> list[dict]:
+    """
+    Only follow links that point to specific provo.gov show pages
+    (URLs with 4-digit IDs like /1203/Show-Name).
+    This avoids nav, footer, and utility links entirely.
+    """
     events = []
-    pages = [
+    # These are the known show listing pages
+    listing_pages = [
         ("https://www.provo.gov/1023/Covey-Presents",  "Arts & Theater"),
         ("https://www.provo.gov/1220/Free-Concerts",   "Music"),
         ("https://www.provo.gov/1234/Black-Box-Shows",  "Theater"),
-        ("https://www.provo.gov/1140/Community-Events", "Community"),
     ]
-    skip = {"tickets", "visit", "classes", "rentals", "support", "about", "home",
-            "search", "sign in", "contact", "giveaway", "rules", "get tickets",
-            "covey presents", "free concerts", "black box", "community events",
-            "ticket giveaway", "back box shows", "privacy policy", "community news",
-            "business & innovation hub", "explore & enjoy", "utilities", "fly provo",
-            "share feedback", "join our team", "site map", "accessibility",
-            "exceptional care"}
-    for url, category in pages:
-        soup = _get(url)
+    # Known show sub-pages already visible in site nav — scrape each directly
+    known_shows = [
+        ("https://www.provo.gov/1203/Phat-Cat-Swinger",          "Phat Cat Swinger",          "Arts & Theater"),
+        ("https://www.provo.gov/1196/Absolute-Adele",            "Absolute Adele",             "Arts & Theater"),
+        ("https://www.provo.gov/1226/Tad-Calcara-New-Deal-Swing-Band", "Tad Calcara & New Deal Swing Band", "Music"),
+        ("https://www.provo.gov/1345/2026-Summer-Band-Series",   "2026 Summer Band Series",    "Music"),
+        ("https://www.provo.gov/1308/Youve-Got-A-Friend-The-Songs-of-Carole-K", "You've Got A Friend: The Songs of Carole King & James Taylor", "Music"),
+        ("https://www.provo.gov/1320/A-Little-Murder-Never-Hurt-Anybody", "A Little Murder Never Hurt Anybody", "Theater"),
+        ("https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol", "Jacob Marley's Christmas Carol", "Theater"),
+    ]
+
+    for url, name, category in known_shows:
+        date_text = ""
+        show_soup = _get(url)
+        if show_soup:
+            date_tag = show_soup.find(string=re.compile(
+                r'\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}'))
+            if date_tag:
+                match = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})[^,]*,?\s*(20\d{2})?',
+                    str(date_tag))
+                if match:
+                    try:
+                        year = match.group(3) or "2026"
+                        date_text = datetime.strptime(
+                            f"{match.group(1)} {match.group(2)} {year}", "%B %d %Y"
+                        ).strftime("%Y-%m-%d")
+                    except ValueError:
+                        pass
+        events.append({"source": "covey_center", "name": name, "date": date_text,
+                       "venue": "Covey Center for the Arts", "category": category, "url": url})
+
+    # Also scan listing pages but ONLY follow links matching /NNNN/Show-Name pattern
+    show_url_pattern = re.compile(r'^/\d{4}/[A-Za-z]')
+    for listing_url, category in listing_pages:
+        soup = _get(listing_url)
         if not soup:
             continue
-        for item in soup.select("li a, .listing a, h2 a, h3 a, h4 a"):
-            name = item.get_text(strip=True)
-            href = item.get("href", "")
-            if not name or len(name) < 8 or any(s in name.lower() for s in skip):
+        known_urls = {s[0] for s in known_shows}
+        for a in soup.select("a[href]"):
+            href = a["href"]
+            if not show_url_pattern.match(href):
                 continue
-            if href.startswith("/"):
-                href = "https://www.provo.gov" + href
+            full_url = "https://www.provo.gov" + href
+            if full_url in known_urls:
+                continue  # already added above
+            name = a.get_text(strip=True)
+            if not name or len(name) < 5:
+                continue
+            known_urls.add(full_url)
             date_text = ""
-            show_soup = _get(href)
+            show_soup = _get(full_url)
             if show_soup:
                 date_tag = show_soup.find(string=re.compile(
                     r'\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}'))
                 if date_tag:
                     match = re.search(
                         r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})[^,]*,?\s*(20\d{2})?',
-                        date_tag)
+                        str(date_tag))
                     if match:
                         try:
                             year = match.group(3) or "2026"
-                            date_text = datetime.strptime(f"{match.group(1)} {match.group(2)} {year}", "%B %d %Y").strftime("%Y-%m-%d")
+                            date_text = datetime.strptime(
+                                f"{match.group(1)} {match.group(2)} {year}", "%B %d %Y"
+                            ).strftime("%Y-%m-%d")
                         except ValueError:
                             pass
             events.append({"source": "covey_center", "name": name, "date": date_text,
-                           "venue": "Covey Center for the Arts", "category": category, "url": href})
+                           "venue": "Covey Center for the Arts", "category": category, "url": full_url})
+
     seen = set()
     unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
     print(f"    Covey Center: {len(unique)} events")
