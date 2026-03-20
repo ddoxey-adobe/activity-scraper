@@ -757,6 +757,8 @@ def fetch_google_events() -> list[dict]:
         "events near Lehi Utah this month",
         "farmers market Salt Lake City",
         "tech meetup Utah",
+        "startup meetup Salt Lake City",
+        "community meetup Provo Utah",
         "5K run race Utah",
         "comedy show Salt Lake City",
         "theater Salt Lake City",
