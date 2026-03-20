@@ -94,7 +94,6 @@ def fetch_ticketmaster_venues() -> list[dict]:
 # ── Velour Live Music ─────────────────────────────────────────────────────────
 def fetch_velour() -> list[dict]:
     events = []
-    # Weekly Thursday open mic
     current = NOW
     while current <= END:
         if current.weekday() == 3:
@@ -107,10 +106,11 @@ def fetch_velour() -> list[dict]:
                 "url": "https://velourlive.com/openmic",
             })
         current += timedelta(days=1)
-    # SerpAPI for ticketed shows
     api_key = os.environ.get("SERPAPI_API_KEY", "") or os.environ.get("SERPAPI_KEY", "")
     if api_key:
-        events += _serpapi("Velour Live Music Provo shows", api_key, "Velour Live Music Gallery, Provo", "Music", "https://velourlive.com/shows")
+        events += _serpapi("Velour Live Music Provo shows", api_key,
+                           "Velour Live Music Gallery, Provo", "Music",
+                           "https://velourlive.com/shows")
     seen = set()
     unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
     print(f"    Velour: {len(unique)} events")
@@ -183,7 +183,9 @@ def fetch_utah_motorsports() -> list[dict]:
               for n, d in known if d >= now_str]
     api_key = os.environ.get("SERPAPI_API_KEY", "") or os.environ.get("SERPAPI_KEY", "")
     if api_key:
-        extra = _serpapi("Utah Motorsports Campus racing 2026", api_key, "Utah Motorsports Campus, Tooele", "Sports", "https://www.utahmotorsportscampus.com/")
+        extra = _serpapi("Utah Motorsports Campus racing 2026", api_key,
+                         "Utah Motorsports Campus, Tooele", "Sports",
+                         "https://www.utahmotorsportscampus.com/")
         existing = {e["name"] for e in events}
         events += [e for e in extra if e["name"] not in existing]
     print(f"    Utah Motorsports Campus: {len(events)} events")
@@ -192,30 +194,36 @@ def fetch_utah_motorsports() -> list[dict]:
 
 # ── University Event Calendars ────────────────────────────────────────────────
 def fetch_byu_events() -> list[dict]:
+    """BYU iCal export — proper line unfolding for multi-line fields."""
     events = []
     feeds = [
-        ("https://calendar.byu.edu/api/Events?categories=9", "Arts & Entertainment"),
-        ("https://calendar.byu.edu/api/Events?categories=2", "Sports"),
+        ("https://calendar.byu.edu/iCal/Export/9", "Arts & Entertainment"),
+        ("https://calendar.byu.edu/iCal/Export/2", "Sports"),
     ]
     for feed_url, category in feeds:
         try:
             r = requests.get(feed_url, headers=HEADERS, timeout=10)
             r.raise_for_status()
-            for block in r.text.split("BEGIN:VEVENT")[1:]:
-                lines = {l.split(":")[0].split(";")[0]: ":".join(l.split(":")[1:]).strip()
-                         for l in block.split("\n") if ":" in l}
-                name = lines.get("SUMMARY", "").strip()
-                dtstart = lines.get("DTSTART", "")[:8]
-                url = lines.get("URL", "https://calendar.byu.edu").strip()
+            content = r.text
+            for block in content.split("BEGIN:VEVENT")[1:]:
+                # Unfold wrapped lines (RFC 5545 line folding)
+                block = re.sub(r'\r?\n[ \t]', '', block)
+                def get_field(field, b=block):
+                    m = re.search(rf'^{field}[;:][^\r\n]*', b, re.MULTILINE)
+                    return m.group(0).split(":", 1)[-1].strip() if m else ""
+                name = get_field("SUMMARY")
+                dtstart = get_field("DTSTART")[:8]
+                url = get_field("URL")
                 if not name or not dtstart:
                     continue
                 try:
                     date = datetime.strptime(dtstart, "%Y%m%d").strftime("%Y-%m-%d")
                 except ValueError:
-                    date = ""
+                    continue
                 events.append({"source": "byu", "name": name, "date": date,
                                 "venue": "Brigham Young University, Provo",
-                                "category": category, "url": url})
+                                "category": category,
+                                "url": url or "https://calendar.byu.edu/arts-entertainment"})
         except Exception as ex:
             print(f"    BYU feed error: {ex}")
     print(f"    BYU Events: {len(events)} events")
@@ -223,22 +231,28 @@ def fetch_byu_events() -> list[dict]:
 
 
 def fetch_slcc_events() -> list[dict]:
+    """SLCC Localist API — no type filtering, use keyword search."""
     events = []
     try:
-        r = requests.get("https://calendar.slcc.edu/api/2/events",
-                         params={"days": 30, "pp": 50, "type": "Arts,Performance,Music"},
-                         headers=HEADERS, timeout=10)
+        r = requests.get(
+            "https://calendar.slcc.edu/api/2/events",
+            params={"days": 30, "pp": 50},
+            headers=HEADERS, timeout=10,
+        )
         r.raise_for_status()
-        for e in r.json().get("events", []):
-            evt = e.get("event", {})
+        data = r.json()
+        for e in data.get("events", []):
+            evt = e.get("event", e)
             name = evt.get("title", "")
             if not name:
                 continue
-            events.append({"source": "slcc", "name": name,
-                           "date": (evt.get("first_date", "") or "")[:10],
-                           "venue": evt.get("location_name", "Salt Lake Community College"),
-                           "category": "Arts & Theater",
-                           "url": evt.get("url", "https://calendar.slcc.edu")})
+            events.append({
+                "source": "slcc", "name": name,
+                "date": (evt.get("first_date", "") or "")[:10],
+                "venue": evt.get("location_name", "Salt Lake Community College"),
+                "category": "Arts & Theater",
+                "url": evt.get("url", "https://calendar.slcc.edu"),
+            })
     except Exception as ex:
         print(f"    SLCC error: {ex}")
     print(f"    SLCC Events: {len(events)} events")
@@ -314,7 +328,8 @@ def fetch_utah_university_events() -> list[dict]:
 def fetch_utah_stadium_events() -> list[dict]:
     events = []
     skip = {"filter events", "all events", "submit an event", "home", "search",
-            "sign in", "contact", "about", "calendar policies"}
+            "sign in", "contact", "about", "calendar policies", "quick links",
+            "site links", "notifications", "report an issue"}
     soup = _get("https://www.stadium.utah.edu/all-events/")
     if soup:
         for item in soup.select("article, .event, .tribe-event"):
@@ -376,17 +391,17 @@ def fetch_usuo() -> list[dict]:
 def fetch_ski_resort_events() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
     known = [
-        ("Alta Spring Skiing & Closing Day",       "2026-04-19", "Alta Ski Area",         "https://www.alta.com/events"),
-        ("Snowbird Oktoberfest",                   "2026-09-05", "Snowbird Resort",        "https://www.snowbird.com/activities-events/events/events-calendar/"),
-        ("Snowbird Spring Ski Race Series",        "2026-03-28", "Snowbird Resort",        "https://www.snowbird.com/activities-events/events/events-calendar/"),
-        ("Solitude Spring Concert Series",         "2026-03-21", "Solitude Mountain",      "https://www.solitudemountain.com/things-to-do/events-and-activities"),
-        ("Solitude Closing Day Party",             "2026-04-12", "Solitude Mountain",      "https://www.solitudemountain.com/things-to-do/events-and-activities"),
-        ("Deer Valley Spring Celebration",         "2026-04-05", "Deer Valley Resort",     "https://www.deervalley.com/things-to-do/events"),
-        ("Deer Valley Music Festival",             "2026-07-10", "Deer Valley Resort",     "https://www.deervalley.com/things-to-do/events"),
-        ("Brighton Closing Day Festival",          "2026-04-19", "Brighton Resort",        "https://www.brightonresort.com/events"),
-        ("Brighton Fall Bike Park Opening",        "2026-06-20", "Brighton Resort",        "https://www.brightonresort.com/events"),
-        ("Park City Mountain Closing Day",         "2026-04-19", "Park City Mountain",     "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
-        ("Park City Mountain 4th of July",         "2026-07-04", "Park City Mountain",     "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
+        ("Alta Spring Skiing & Closing Day",   "2026-04-19", "Alta Ski Area",       "https://www.alta.com/events"),
+        ("Snowbird Oktoberfest",               "2026-09-05", "Snowbird Resort",     "https://www.snowbird.com/activities-events/events/events-calendar/"),
+        ("Snowbird Spring Ski Race Series",    "2026-03-28", "Snowbird Resort",     "https://www.snowbird.com/activities-events/events/events-calendar/"),
+        ("Solitude Spring Concert Series",     "2026-03-21", "Solitude Mountain",   "https://www.solitudemountain.com/things-to-do/events-and-activities"),
+        ("Solitude Closing Day Party",         "2026-04-12", "Solitude Mountain",   "https://www.solitudemountain.com/things-to-do/events-and-activities"),
+        ("Deer Valley Spring Celebration",     "2026-04-05", "Deer Valley Resort",  "https://www.deervalley.com/things-to-do/events"),
+        ("Deer Valley Music Festival",         "2026-07-10", "Deer Valley Resort",  "https://www.deervalley.com/things-to-do/events"),
+        ("Brighton Closing Day Festival",      "2026-04-19", "Brighton Resort",     "https://www.brightonresort.com/events"),
+        ("Brighton Fall Bike Park Opening",    "2026-06-20", "Brighton Resort",     "https://www.brightonresort.com/events"),
+        ("Park City Mountain Closing Day",     "2026-04-19", "Park City Mountain",  "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
+        ("Park City Mountain 4th of July",     "2026-07-04", "Park City Mountain",  "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
     ]
     events = [{"source": "ski_resort", "name": n, "date": d, "venue": v,
                "category": "Sports", "url": u}
@@ -429,7 +444,9 @@ def fetch_utah_olympic() -> list[dict]:
                     r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})', text)
                 if match:
                     try:
-                        current_date = datetime.strptime(f"{match.group(1)} {match.group(2)} 2026", "%B %d %Y").strftime("%Y-%m-%d")
+                        current_date = datetime.strptime(
+                            f"{match.group(1)} {match.group(2)} 2026", "%B %d %Y"
+                        ).strftime("%Y-%m-%d")
                     except ValueError:
                         current_date = ""
             elif tag.name == "a" and "/event/" in tag.get("href", ""):
@@ -463,27 +480,15 @@ def fetch_soldier_hollow() -> list[dict]:
 
 # ── Covey Center for the Arts ─────────────────────────────────────────────────
 def fetch_covey_center() -> list[dict]:
-    """
-    Only follow links that point to specific provo.gov show pages
-    (URLs with 4-digit IDs like /1203/Show-Name).
-    This avoids nav, footer, and utility links entirely.
-    """
     events = []
-    # These are the known show listing pages
-    listing_pages = [
-        ("https://www.provo.gov/1023/Covey-Presents",  "Arts & Theater"),
-        ("https://www.provo.gov/1220/Free-Concerts",   "Music"),
-        ("https://www.provo.gov/1234/Black-Box-Shows",  "Theater"),
-    ]
-    # Known show sub-pages already visible in site nav — scrape each directly
     known_shows = [
-        ("https://www.provo.gov/1203/Phat-Cat-Swinger",          "Phat Cat Swinger",          "Arts & Theater"),
-        ("https://www.provo.gov/1196/Absolute-Adele",            "Absolute Adele",             "Arts & Theater"),
-        ("https://www.provo.gov/1226/Tad-Calcara-New-Deal-Swing-Band", "Tad Calcara & New Deal Swing Band", "Music"),
-        ("https://www.provo.gov/1345/2026-Summer-Band-Series",   "2026 Summer Band Series",    "Music"),
-        ("https://www.provo.gov/1308/Youve-Got-A-Friend-The-Songs-of-Carole-K", "You've Got A Friend: The Songs of Carole King & James Taylor", "Music"),
-        ("https://www.provo.gov/1320/A-Little-Murder-Never-Hurt-Anybody", "A Little Murder Never Hurt Anybody", "Theater"),
-        ("https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol", "Jacob Marley's Christmas Carol", "Theater"),
+        ("https://www.provo.gov/1203/Phat-Cat-Swinger",                        "Phat Cat Swinger",                                              "Arts & Theater"),
+        ("https://www.provo.gov/1196/Absolute-Adele",                          "Absolute Adele",                                                "Arts & Theater"),
+        ("https://www.provo.gov/1226/Tad-Calcara-New-Deal-Swing-Band",         "Tad Calcara & New Deal Swing Band",                             "Music"),
+        ("https://www.provo.gov/1345/2026-Summer-Band-Series",                 "2026 Summer Band Series",                                       "Music"),
+        ("https://www.provo.gov/1308/Youve-Got-A-Friend-The-Songs-of-Carole-K","You've Got A Friend: The Songs of Carole King & James Taylor",  "Music"),
+        ("https://www.provo.gov/1320/A-Little-Murder-Never-Hurt-Anybody",      "A Little Murder Never Hurt Anybody",                            "Theater"),
+        ("https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol",           "Jacob Marley's Christmas Carol",                                "Theater"),
     ]
     nav_skip = {"support", "tickets", "visit", "classes", "rentals", "about", "home",
                 "search", "contact", "giveaway", "donate", "membership", "volunteer",
@@ -510,20 +515,24 @@ def fetch_covey_center() -> list[dict]:
         events.append({"source": "covey_center", "name": name, "date": date_text,
                        "venue": "Covey Center for the Arts", "category": category, "url": url})
 
-    # Also scan listing pages but ONLY follow links matching /NNNN/Show-Name pattern
+    # Scan listing pages for any additional shows matching /NNNN/Show-Name pattern
     show_url_pattern = re.compile(r'^/\d{4}/[A-Za-z]')
-    for listing_url, category in listing_pages:
+    known_urls = {s[0] for s in known_shows}
+    for listing_url, category in [
+        ("https://www.provo.gov/1023/Covey-Presents",  "Arts & Theater"),
+        ("https://www.provo.gov/1220/Free-Concerts",   "Music"),
+        ("https://www.provo.gov/1234/Black-Box-Shows",  "Theater"),
+    ]:
         soup = _get(listing_url)
         if not soup:
             continue
-        known_urls = {s[0] for s in known_shows}
         for a in soup.select("a[href]"):
             href = a["href"]
             if not show_url_pattern.match(href):
                 continue
             full_url = "https://www.provo.gov" + href
             if full_url in known_urls:
-                continue  # already added above
+                continue
             name = a.get_text(strip=True)
             if not name or len(name) < 5 or name.lower() in nav_skip:
                 continue
@@ -557,35 +566,18 @@ def fetch_covey_center() -> list[dict]:
 # ── The Ruth and Nathan Hale Theater ─────────────────────────────────────────
 def fetch_the_ruth() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
-    events = []
-    soup = _get("https://www.theruth.org/tickets")
-    if soup:
-        for item in soup.select(".production, .show, article, .event-item"):
-            name = item.select_one("h2, h3, .title, .production-title")
-            date = item.select_one("time, .dates, .run-dates, .date")
-            link = item.select_one("a")
-            if not name:
-                continue
-            url = link["href"] if link and link.get("href") else "https://www.theruth.org/tickets"
-            if url.startswith("/"):
-                url = "https://www.theruth.org" + url
-            events.append({"source": "the_ruth", "name": name.get_text(strip=True),
-                           "date": date.get_text(strip=True)[:10] if date else "",
-                           "venue": "The Ruth and Nathan Hale Theater", "category": "Theater", "url": url})
-    if not events:
-        season = [
-            ("Fiddler on the Roof",  "2026-01-30", "2026-03-21"),
-            ("Pride and Prejudice",  "2026-04-03", "2026-05-23"),
-            ("The Addams Family",    "2026-06-05", "2026-07-25"),
-            ("Newsies",              "2026-08-07", "2026-09-26"),
-            ("Into the Woods",       "2026-10-09", "2026-11-21"),
-            ("A Christmas Carol",    "2026-12-04", "2026-12-23"),
-        ]
-        for n, start, end in season:
-            if end >= now_str:
-                events.append({"source": "the_ruth", "name": n, "date": start,
-                               "venue": "The Ruth and Nathan Hale Theater",
-                               "category": "Theater", "url": "https://tickets.theruth.org/events"})
+    season = [
+        ("Fiddler on the Roof",  "2026-01-30", "2026-03-21"),
+        ("Pride and Prejudice",  "2026-04-03", "2026-05-23"),
+        ("The Addams Family",    "2026-06-05", "2026-07-25"),
+        ("Newsies",              "2026-08-07", "2026-09-26"),
+        ("Into the Woods",       "2026-10-09", "2026-11-21"),
+        ("A Christmas Carol",    "2026-12-04", "2026-12-23"),
+    ]
+    events = [{"source": "the_ruth", "name": n, "date": start,
+               "venue": "The Ruth and Nathan Hale Theater",
+               "category": "Theater", "url": "https://tickets.theruth.org/events"}
+              for n, start, end in season if end >= now_str]
     print(f"    The Ruth: {len(events)} events")
     return events
 
@@ -614,7 +606,9 @@ def fetch_scera_shell() -> list[dict]:
                 if match:
                     try:
                         year = match.group(2) or "2026"
-                        date_text = datetime.strptime(f"{match.group(1)} {year}", "%B %d %Y").strftime("%Y-%m-%d")
+                        date_text = datetime.strptime(
+                            f"{match.group(1)} {year}", "%B %d %Y"
+                        ).strftime("%Y-%m-%d")
                     except ValueError:
                         pass
             events.append({"source": "scera_shell", "name": name, "date": date_text,
@@ -646,10 +640,6 @@ def fetch_scera() -> list[dict]:
 
 # ── The Off Broadway Theatre ──────────────────────────────────────────────────
 def fetch_obt() -> list[dict]:
-    """
-    OBT's ticketing is on Ludus (blocks scrapers) and theobt.org is JS-rendered.
-    Use hardcoded 2026 season from offbroadwaytheatreco.ludus.com
-    """
     now_str = NOW.strftime("%Y-%m-%d")
     season = [
         ("OBT: Greased",            "2026-01-08", "2026-03-28"),
@@ -659,14 +649,13 @@ def fetch_obt() -> list[dict]:
         ("OBT: Nutcracker Parody",  "2026-11-12", "2027-01-02"),
     ]
     events = [{"source": "obt", "name": name, "date": start,
-               "venue": "The Off Broadway Theatre",
-               "category": "Comedy",
+               "venue": "The Off Broadway Theatre", "category": "Comedy",
                "url": "https://offbroadwaytheatreco.ludus.com/index.php"}
               for name, start, end in season if end >= now_str]
-    # Also add weekly Laughing Stock Improv shows (Fridays & Saturdays)
+    # Weekly Laughing Stock Improv — Fridays & Saturdays
     current = NOW
     while current <= END:
-        if current.weekday() in (4, 5):  # Friday=4, Saturday=5
+        if current.weekday() in (4, 5):
             events.append({
                 "source": "obt",
                 "name": "OBT: Laughing Stock Improv Comedy",
@@ -683,7 +672,7 @@ def fetch_obt() -> list[dict]:
 # ── KRCL Events ───────────────────────────────────────────────────────────────
 def fetch_krcl() -> list[dict]:
     events = []
-    for category in ["live-music", "arts-culture"]:  # removed "community" — was 500 erroring
+    for category in ["live-music"]:  # arts-culture and community return 500 errors
         soup = _get(f"https://krcl.org/events/?category={category}")
         if not soup:
             continue
