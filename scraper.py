@@ -3,6 +3,7 @@ import json
 import requests
 from datetime import datetime, timedelta
 from scrapers_extra import scrape_extra
+from deduplicator import deduplicate
 
 CITY = "Lehi, UT"
 LAT, LNG = 40.3916, -111.8508
@@ -142,6 +143,11 @@ def scrape_all() -> list[dict]:
 if __name__ == "__main__":
     print("Scraping events...")
     events = scrape_all()
+
+    print("Deduplicating...")
+    events, removed = deduplicate(events)
+    print(f"  Removed {removed} duplicates → {len(events)} unique events")
+
     with open("events_raw.json", "w") as f:
         json.dump(events, f, indent=2)
     print(f"Saved {len(events)} events to events_raw.json")
