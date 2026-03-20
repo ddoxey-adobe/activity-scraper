@@ -2,6 +2,7 @@ import os
 import json
 import requests
 from datetime import datetime, timedelta
+from scrapers_extra import scrape_extra
 
 CITY = "Lehi, UT"
 LAT, LNG = 40.3916, -111.8508
@@ -194,6 +195,9 @@ def scrape_all() -> list[dict]:
             all_events.extend(results)
         except Exception as ex:
             print(f"  {label} error: {ex}")
+
+    print("  Extra sources:")
+    all_events.extend(scrape_extra())
 
     deduped = deduplicate(all_events)
     print(f"  Total after dedup: {len(deduped)}")
