@@ -97,46 +97,12 @@ def fetch_bandsintown() -> list[dict]:
 
 
 def fetch_meetup() -> list[dict]:
-    key = os.environ.get("MEETUP_API_KEY", "")
-    if not key:
-        print("  Meetup: no API key, skipping")
-        return []
-    url = "https://api.meetup.com/gql"
-    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-    query = """
-    query($lat: Float!, $lon: Float!, $radius: Float!, $after: DateTime!) {
-      keywordSearch(filter: {lat: $lat, lon: $lon, radius: $radius, source: EVENTS, startDateRange: $after}) {
-        edges { node { result { ... on Event {
-          title dateTime venue { name } eventUrl
-          group { category { name } }
-        }}}}
-      }
-    }
     """
-    events = []
-    try:
-        r = requests.post(url, headers=headers, json={
-            "query": query,
-            "variables": {"lat": LAT, "lon": LNG, "radius": float(RADIUS_MILES), "after": NOW.isoformat()}
-        }, timeout=10)
-        r.raise_for_status()
-        edges = r.json().get("data", {}).get("keywordSearch", {}).get("edges", [])
-        for edge in edges:
-            e = edge.get("node", {}).get("result", {})
-            if not e.get("title"):
-                continue
-            venue = e.get("venue") or {}
-            events.append({
-                "source": "meetup",
-                "name": e.get("title", ""),
-                "date": (e.get("dateTime", "") or "")[:10],
-                "venue": venue.get("name", ""),
-                "category": e.get("group", {}).get("category", {}).get("name", ""),
-                "url": e.get("eventUrl", ""),
-            })
-    except Exception as ex:
-        print(f"  Meetup error: {ex}")
-    return events
+    Meetup API now requires a Pro subscription ($30+/month).
+    Meetup events are caught via Google Events SerpAPI queries instead.
+    """
+    print("  Meetup: Pro subscription required, using SerpAPI instead")
+    return []
 
 
 def deduplicate(events: list[dict]) -> list[dict]:
