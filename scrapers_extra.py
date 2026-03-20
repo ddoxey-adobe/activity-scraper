@@ -869,6 +869,8 @@ def fetch_google_events() -> list[dict]:
         "theater Salt Lake City",
         "jazz Salt Lake City",
         "site:eventbrite.com events Salt Lake City Utah",
+        "site:facebook.com events Salt Lake City Utah",
+        "Silicon Slopes tech events Utah",
     ]
     for q in queries:
         events += _serpapi(q, api_key, "", "Event", "")
@@ -881,6 +883,9 @@ def scrape_extra() -> list[dict]:
     all_events = []
     for fn in [
         fetch_ticketmaster_venues,
+        fetch_predicthq,
+        fetch_visit_salt_lake,
+        fetch_silicon_slopes,
         fetch_velour,
         fetch_thanksgiving_point,
         fetch_utah_motorsports,
