@@ -637,32 +637,38 @@ def fetch_scera() -> list[dict]:
 
 # ── The Off Broadway Theatre ──────────────────────────────────────────────────
 def fetch_obt() -> list[dict]:
-    events = []
-    for path in ["/performances", "/2026-season", "/"]:
-        soup = _get(f"https://www.theobt.org{path}")
-        if not soup:
-            continue
-        for item in soup.select(".entry-content, .show, .production, article, .performance"):
-            name = item.select_one("h1, h2, h3, .entry-title")
-            date = item.select_one("time, .dates, .date, .run-dates")
-            link = item.select_one("a")
-            if not name or len(name.get_text(strip=True)) < 3:
-                continue
-            text = name.get_text(strip=True)
-            if text.lower() in ["home", "about", "contact", "tickets", "donate"]:
-                continue
-            url = link["href"] if link and link.get("href") else "https://www.theobt.org"
-            if url.startswith("/"):
-                url = "https://www.theobt.org" + url
-            events.append({"source": "obt", "name": f"OBT: {text}",
-                           "date": (date.get_text(strip=True)[:10] if date else ""),
-                           "venue": "The Off Broadway Theatre", "category": "Comedy", "url": url})
-        if events:
-            break
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    OBT: {len(unique)} events")
-    return unique
+    """
+    OBT's ticketing is on Ludus (blocks scrapers) and theobt.org is JS-rendered.
+    Use hardcoded 2026 season from offbroadwaytheatreco.ludus.com
+    """
+    now_str = NOW.strftime("%Y-%m-%d")
+    season = [
+        ("OBT: Greased",            "2026-01-08", "2026-03-28"),
+        ("OBT: The Princess Bride", "2026-04-02", "2026-06-06"),
+        ("OBT: Big Bang Parody",    "2026-06-11", "2026-08-22"),
+        ("OBT: Scooby-Doo Parody",  "2026-08-27", "2026-11-07"),
+        ("OBT: Nutcracker Parody",  "2026-11-12", "2027-01-02"),
+    ]
+    events = [{"source": "obt", "name": name, "date": start,
+               "venue": "The Off Broadway Theatre",
+               "category": "Comedy",
+               "url": "https://offbroadwaytheatreco.ludus.com/index.php"}
+              for name, start, end in season if end >= now_str]
+    # Also add weekly Laughing Stock Improv shows (Fridays & Saturdays)
+    current = NOW
+    while current <= END:
+        if current.weekday() in (4, 5):  # Friday=4, Saturday=5
+            events.append({
+                "source": "obt",
+                "name": "OBT: Laughing Stock Improv Comedy",
+                "date": current.strftime("%Y-%m-%d"),
+                "venue": "The Off Broadway Theatre",
+                "category": "Comedy",
+                "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+            })
+        current += timedelta(days=1)
+    print(f"    OBT: {len(events)} events")
+    return events
 
 
 # ── KRCL Events ───────────────────────────────────────────────────────────────
