@@ -91,6 +91,111 @@ def fetch_ticketmaster_venues() -> list[dict]:
     return events
 
 
+# ── PredictHQ ─────────────────────────────────────────────────────────────────
+def fetch_predicthq() -> list[dict]:
+    """
+    PredictHQ aggregates events from 900+ sources.
+    Free tier: 1,000 events/month. Sign up at predicthq.com.
+    """
+    key = os.environ.get("PREDICTHQ_API_KEY", "")
+    if not key:
+        print("    PredictHQ: no API key, skipping")
+        return []
+    events = []
+    try:
+        r = requests.get(
+            "https://api.predicthq.com/v1/events/",
+            headers={"Authorization": f"Bearer {key}", "Accept": "application/json"},
+            params={
+                "within": f"50mi@{LAT},{LNG}",
+                "start.gte": NOW.strftime("%Y-%m-%d"),
+                "start.lte": END.strftime("%Y-%m-%d"),
+                "category": "concerts,community,conferences,expos,festivals,performing-arts,sports",
+                "limit": 100,
+                "sort": "start",
+            },
+            timeout=10,
+        )
+        r.raise_for_status()
+        for e in r.json().get("results", []):
+            loc = e.get("geo", {}).get("geometry", {}).get("coordinates", [None, None])
+            events.append({
+                "source": "predicthq",
+                "name": e.get("title", ""),
+                "date": (e.get("start", "") or "")[:10],
+                "venue": e.get("entities", [{}])[0].get("name", "") if e.get("entities") else "",
+                "category": e.get("category", "").replace("-", " ").title(),
+                "url": f"https://www.predicthq.com/events/{e.get('id', '')}",
+            })
+    except Exception as ex:
+        print(f"    PredictHQ error: {ex}")
+    print(f"    PredictHQ: {len(events)} events")
+    return events
+
+
+# ── VisitSaltLake.com ─────────────────────────────────────────────────────────
+def fetch_visit_salt_lake() -> list[dict]:
+    """VisitSaltLake pulls from NowPlayingUtah — scrape their events page."""
+    events = []
+    soup = _get("https://www.visitsaltlake.com/events/")
+    if soup:
+        for item in soup.select("article, .event, .listing-item, .event-item"):
+            name = item.select_one("h2, h3, h4, .title, .event-title")
+            date = item.select_one("time, .date, .event-date, .tribe-event-date-start")
+            link = item.select_one("a")
+            if not name or len(name.get_text(strip=True)) < 3:
+                continue
+            url = link["href"] if link and link.get("href") else "https://www.visitsaltlake.com/events/"
+            if url.startswith("/"):
+                url = "https://www.visitsaltlake.com" + url
+            events.append({
+                "source": "visit_salt_lake",
+                "name": name.get_text(strip=True),
+                "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
+                "venue": "",
+                "category": "Community",
+                "url": url,
+            })
+    seen = set()
+    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
+    print(f"    VisitSaltLake: {len(unique)} events")
+    return unique
+
+
+# ── Silicon Slopes ────────────────────────────────────────────────────────────
+def fetch_silicon_slopes() -> list[dict]:
+    """Silicon Slopes Utah tech & startup events."""
+    events = []
+    for url in ["https://app.siliconslopes.com/activities",
+                "https://siliconslopes.com/events/"]:
+        soup = _get(url)
+        if not soup:
+            continue
+        for item in soup.select("article, .event, .activity, .card, [class*='event']"):
+            name = item.select_one("h2, h3, h4, .title, [class*='title']")
+            date = item.select_one("time, .date, [class*='date']")
+            link = item.select_one("a")
+            if not name or len(name.get_text(strip=True)) < 3:
+                continue
+            href = link["href"] if link and link.get("href") else url
+            if href.startswith("/"):
+                href = "https://app.siliconslopes.com" + href
+            events.append({
+                "source": "silicon_slopes",
+                "name": name.get_text(strip=True),
+                "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
+                "venue": "Silicon Slopes, Utah",
+                "category": "Tech",
+                "url": href,
+            })
+        if events:
+            break
+    seen = set()
+    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
+    print(f"    Silicon Slopes: {len(unique)} events")
+    return unique
+
+
 # ── Velour Live Music ─────────────────────────────────────────────────────────
 def fetch_velour() -> list[dict]:
     events = []
