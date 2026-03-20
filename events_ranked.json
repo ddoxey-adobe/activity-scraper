@@ -3511,6 +3511,16 @@
   },
   {
     "source": "google_events",
+    "name": "Drop13 Big Cottonwood Canyon Half Marathon & 5K",
+    "date": "Jun 13",
+    "venue": "",
+    "category": "Event",
+    "url": "https://runsignup.com/Race/83440/RaceInsurance",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
     "name": "2026 Park City Champions Quarterly Mastermind",
     "date": "Jun 24",
     "venue": "Deer Valley Resort",
@@ -3536,16 +3546,6 @@
     "venue": "The Gateway",
     "category": "Event",
     "url": "https://www.wiseguyscomedy.com/utah/salt-lake-city/the-showroom/e/martin-amini/335993",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "google_events",
-    "name": "Park City Trail Series 5K",
-    "date": "Jun 6",
-    "venue": "Park City, Utah",
-    "category": "Event",
-    "url": "https://www.runguides.com/event/2354/park-city-trail-series-5k",
     "score": 0,
     "reason": ""
   },
@@ -3661,21 +3661,31 @@
   },
   {
     "source": "google_events",
-    "name": "American Idiot",
-    "date": "Mar 20",
-    "venue": "The Grand Theatre",
-    "category": "Event",
-    "url": "https://www.eventticketscenter.com/american-idiot-salt-lake-city-03-20-2026/7656815/t",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "google_events",
     "name": "Tanner Dance - Wild Ideas",
     "date": "Mar 20",
     "venue": "Capitol Theatre",
     "category": "Event",
     "url": "https://www.visitsaltlake.com/event/dance/wild-ideas/76358/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Jacqueline Novak: 2026 Tour",
+    "date": "Mar 20",
+    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
+    "category": "Event",
+    "url": "https://www.wiseguyscomedy.com/utah/salt-lake-city/the-showroom/e/jacqueline-novak-2026-tour",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "American Idiot",
+    "date": "Mar 20",
+    "venue": "The Grand Theatre",
+    "category": "Event",
+    "url": "https://www.eventticketscenter.com/american-idiot-salt-lake-city-03-20-2026/7656815/t",
     "score": 0,
     "reason": ""
   },
@@ -3896,16 +3906,6 @@
     "venue": "Park City Mountain",
     "category": "Sports",
     "url": "https://events.humanitix.com/host/central-division-nsp",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "google_events",
-    "name": "JIMBO'S 'JOAN! Can We Laugh?! Tour",
-    "date": "Mar 25",
-    "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
-    "category": "Event",
-    "url": "https://www.viagogo.com/Theater-Tickets/Shows/Jimbo-Tickets/E-160020819",
     "score": 0,
     "reason": ""
   },
