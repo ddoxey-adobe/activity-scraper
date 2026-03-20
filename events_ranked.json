@@ -1,5 +1,65 @@
 [
   {
+    "source": "covey_center",
+    "name": "Privacy Policy",
+    "date": "2025-01-29",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/site/privacy",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "You've Got A Friend: The Songs of Carole King & James Taylor",
+    "date": "2025-06-29",
+    "venue": "Covey Center for the Arts",
+    "category": "Music",
+    "url": "https://www.provo.gov/1308/Youve-Got-A-Friend-The-Songs-of-Carole-K",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "desert_star",
+    "name": "Greased: Happy Days Are Here Again",
+    "date": "2026-01-08",
+    "venue": "Desert Star Playhouse, Murray",
+    "category": "Comedy",
+    "url": "https://desertstarplayhouse.com/2026-season/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "the_ruth",
+    "name": "Fiddler on the Roof",
+    "date": "2026-01-30",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Theater",
+    "url": "https://tickets.theruth.org/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "HADESTOWN TEEN EDITION",
+    "date": "2026-03-13",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/hadestown-teen-edition/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Community News",
+    "date": "2026-03-19",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/CivicAlerts.aspx",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Utah Mammoth vs. Anaheim Ducks",
     "date": "2026-03-20",
@@ -76,6 +136,106 @@
     "venue": "The Complex - UT",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OSOx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "NCAA XC Skiing Championships",
+    "date": "2026-03-20",
+    "venue": "Soldier Hollow Nordic Center",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/ncaa-cross-country-skiing-championships-2026/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "2026 U.S. Biathlon Senior Nationals & Spring Festival",
+    "date": "2026-03-20",
+    "venue": "Soldier Hollow Nordic Center",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/2026-us-biathlon-national-championships-march-25-29/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "David Wright Memorial/U14 Qualifier",
+    "date": "2026-03-20",
+    "venue": "Utah Olympic Park",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/david-wright-memorial-u14-qualifier-2/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "NCAA Alpine Skiing Championships \u2013 Giant Slalom",
+    "date": "2026-03-20",
+    "venue": "Utah Olympic Park",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/ncaa-alpine-skiing-championships/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "NCAA Alpine Skiing Championships \u2013 Slalom",
+    "date": "2026-03-20",
+    "venue": "Utah Olympic Park",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/ncaa-alpine-skiing-championships-slalom/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "Winter Sport Celebration",
+    "date": "2026-03-20",
+    "venue": "Utah Olympic Park",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/winter-sport-celebration-5/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "US Junior National Freestyle Championships",
+    "date": "2026-03-20",
+    "venue": "Utah Olympic Park",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/us-junior-national-freestyle-championship/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_olympic",
+    "name": "LGT World Men\u2019s Curling Championships",
+    "date": "2026-03-20",
+    "venue": "Utah Olympic Oval",
+    "category": "Sports",
+    "url": "https://utaholympiclegacy.org/event/isu-four-continents-speed-skating-championships-2/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Business & Innovation Hub",
+    "date": "2026-03-20",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/101/Work",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Explore & Enjoy",
+    "date": "2026-03-20",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/31/Play",
     "score": 0,
     "reason": ""
   },
@@ -176,6 +336,16 @@
     "venue": "Kilby Court",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7qfP7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ski_resort",
+    "name": "Solitude Spring Concert Series",
+    "date": "2026-03-21",
+    "venue": "Solitude Mountain",
+    "category": "Sports",
+    "url": "https://www.solitudemountain.com/things-to-do/events-and-activities",
     "score": 0,
     "reason": ""
   },
@@ -300,16 +470,6 @@
     "reason": ""
   },
   {
-    "source": "ticketmaster_venue",
-    "name": "Mariah the Scientist: HEARTS SOLD SEPARATELY TOUR",
-    "date": "2026-03-24",
-    "venue": "Kilby Court",
-    "category": "Music",
-    "url": "https://www.ticketmaster.com/mariah-the-scientist-hearts-sold-separately-san-francisco-california-03-24-2026/event/1C006323C02058D4",
-    "score": 0,
-    "reason": ""
-  },
-  {
     "source": "ticketmaster",
     "name": "Utah Jazz vs. Washington Wizards",
     "date": "2026-03-25",
@@ -346,6 +506,16 @@
     "venue": "Kilby Court",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O-p3",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "AN EVENING OF STORYTELLING",
+    "date": "2026-03-25",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/an-evening-of-storytelling/",
     "score": 0,
     "reason": ""
   },
@@ -446,6 +616,16 @@
     "venue": "The State Room",
     "category": "Undefined",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oa_F",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "velour",
+    "name": "Velour Open Mic Night",
+    "date": "2026-03-26",
+    "venue": "Velour Live Music Gallery, Provo",
+    "category": "Music",
+    "url": "https://velourlive.com/openmic",
     "score": 0,
     "reason": ""
   },
@@ -680,12 +860,12 @@
     "reason": ""
   },
   {
-    "source": "ticketmaster_venue",
-    "name": "Calum Scott - The Avenoir Tour 2026",
+    "source": "ski_resort",
+    "name": "Snowbird Spring Ski Race Series",
     "date": "2026-03-28",
-    "venue": "Kilby Court",
-    "category": "Music",
-    "url": "https://www.ticketmaster.com/calum-scott-the-avenoir-tour-2026-san-francisco-california-03-28-2026/event/1C00628310F76A1A",
+    "venue": "Snowbird Resort",
+    "category": "Sports",
+    "url": "https://www.snowbird.com/activities-events/events/events-calendar/",
     "score": 0,
     "reason": ""
   },
@@ -960,6 +1140,16 @@
     "reason": ""
   },
   {
+    "source": "desert_star",
+    "name": "The Princess Bride",
+    "date": "2026-04-02",
+    "venue": "Desert Star Playhouse, Murray",
+    "category": "Comedy",
+    "url": "https://desertstarplayhouse.com/2026-season/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Salt Lake Bees vs. Sacramento River Cats",
     "date": "2026-04-03",
@@ -1010,12 +1200,12 @@
     "reason": ""
   },
   {
-    "source": "ticketmaster_venue",
-    "name": "LAMB OF GOD: INTO OBLIVION TOUR",
+    "source": "the_ruth",
+    "name": "Pride and Prejudice",
     "date": "2026-04-03",
-    "venue": "Kilby Court",
-    "category": "Music",
-    "url": "https://www.ticketmaster.com/lamb-of-god-into-oblivion-tour-san-francisco-california-04-03-2026/event/1C00636EC16ADD9B",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Theater",
+    "url": "https://tickets.theruth.org/events",
     "score": 0,
     "reason": ""
   },
@@ -1130,6 +1320,16 @@
     "reason": ""
   },
   {
+    "source": "ski_resort",
+    "name": "Deer Valley Spring Celebration",
+    "date": "2026-04-05",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.deervalley.com/things-to-do/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "ticketmaster",
     "name": "Calum Scott - The Avenoir Tour 2026",
     "date": "2026-04-06",
@@ -1166,16 +1366,6 @@
     "venue": "The Complex - UT",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oa0_",
-    "score": 0,
-    "reason": ""
-  },
-  {
-    "source": "ticketmaster_venue",
-    "name": "Sticky Fingers - Live in North America",
-    "date": "2026-04-06",
-    "venue": "Kilby Court",
-    "category": "Music",
-    "url": "https://www.ticketmaster.com/sticky-fingers-live-in-north-america-san-francisco-california-04-06-2026/event/1C00634CE6969C72",
     "score": 0,
     "reason": ""
   },
@@ -1310,16 +1500,6 @@
     "reason": ""
   },
   {
-    "source": "ticketmaster_venue",
-    "name": "City Pop Waves: Masayoshi Takanaka SUPER TAKANAKA WORLD LIVE 2026",
-    "date": "2026-04-09",
-    "venue": "Kilby Court",
-    "category": "Music",
-    "url": "https://www.ticketmaster.com/city-pop-waves-masayoshi-takanaka-super-san-francisco-california-04-09-2026/event/1C006367A2CCC18A",
-    "score": 0,
-    "reason": ""
-  },
-  {
     "source": "ticketmaster",
     "name": "BYU Cougars Mens Volleyball vs. USC Trojans Mens Volleyball",
     "date": "2026-04-10",
@@ -1386,6 +1566,16 @@
     "venue": "The Complex - UT",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OOvM",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "SCHOOL OF ROCK: THE MUSICAL",
+    "date": "2026-04-10",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/school-of-rock-the-musical/",
     "score": 0,
     "reason": ""
   },
@@ -1520,12 +1710,12 @@
     "reason": ""
   },
   {
-    "source": "ticketmaster_venue",
-    "name": "Jose Maria Napoleon - Hasta Siempre. Tour de Despedida USA 2026",
+    "source": "utah_motorsports",
+    "name": "NASA Utah Track Day at UMC",
     "date": "2026-04-11",
-    "venue": "Kilby Court",
-    "category": "Music",
-    "url": "https://www.ticketmaster.com/jose-maria-napoleon-hasta-siempre-tour-san-francisco-california-04-11-2026/event/1C00643CD485B926",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
     "score": 0,
     "reason": ""
   },
@@ -1576,6 +1766,16 @@
     "venue": "The Complex - UT",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-po7",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ski_resort",
+    "name": "Solitude Closing Day Party",
+    "date": "2026-04-12",
+    "venue": "Solitude Mountain",
+    "category": "Sports",
+    "url": "https://www.solitudemountain.com/things-to-do/events-and-activities",
     "score": 0,
     "reason": ""
   },
@@ -1760,16 +1960,6 @@
     "reason": ""
   },
   {
-    "source": "ticketmaster_venue",
-    "name": "Ari Lennox - The Vacancy Tour",
-    "date": "2026-04-16",
-    "venue": "Kilby Court",
-    "category": "Music",
-    "url": "https://www.ticketmaster.com/ari-lennox-the-vacancy-tour-san-francisco-california-04-16-2026/event/1C00643DA802D63B",
-    "score": 0,
-    "reason": ""
-  },
-  {
     "source": "ticketmaster",
     "name": "Wizard Of Oz",
     "date": "2026-04-17",
@@ -1826,6 +2016,16 @@
     "venue": "The Complex - UT",
     "category": "Music",
     "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7--Az",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "usuo",
+    "name": "Utah Symphony: Spring Pops",
+    "date": "2026-04-17",
+    "venue": "Abravanel Hall",
+    "category": "Music",
+    "url": "https://usuo.org/schedule/",
     "score": 0,
     "reason": ""
   },
@@ -1910,12 +2110,232 @@
     "reason": ""
   },
   {
+    "source": "ski_resort",
+    "name": "Alta Spring Skiing & Closing Day",
+    "date": "2026-04-19",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://www.alta.com/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ski_resort",
+    "name": "Brighton Closing Day Festival",
+    "date": "2026-04-19",
+    "venue": "Brighton Resort",
+    "category": "Sports",
+    "url": "https://www.brightonresort.com/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ski_resort",
+    "name": "Park City Mountain Closing Day",
+    "date": "2026-04-19",
+    "venue": "Park City Mountain",
+    "category": "Sports",
+    "url": "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "usuo",
+    "name": "Utah Opera: The Marriage of Figaro",
+    "date": "2026-04-24",
+    "venue": "Capitol Theatre",
+    "category": "Music",
+    "url": "https://usuo.org/schedule/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_motorsports",
+    "name": "REV Performance Track Day",
+    "date": "2026-04-25",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_motorsports",
+    "name": "Utah SBA Sportbike Track Day",
+    "date": "2026-05-02",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "FINDING PEACE: Free Musical Fireside",
+    "date": "2026-05-03",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/finding-peace-free-musical-fireside/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "THE MAGIC OF DISNEY",
+    "date": "2026-05-04",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/the-magic-of-disney/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "usuo",
+    "name": "Utah Symphony: Beethoven's Ninth",
+    "date": "2026-05-07",
+    "venue": "Abravanel Hall",
+    "category": "Music",
+    "url": "https://usuo.org/schedule/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "usuo",
+    "name": "Utah Opera: Don Pasquale",
+    "date": "2026-05-15",
+    "venue": "Capitol Theatre",
+    "category": "Music",
+    "url": "https://usuo.org/schedule/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "DALLYN VAIL BAYLES: Anthems of Hope \u2013 An Evening of Inspirational Broadway",
+    "date": "2026-05-15",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/dallyn-vail-bayles/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_motorsports",
+    "name": "APEX Track Days at UMC",
+    "date": "2026-05-16",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "soldier_hollow",
+    "name": "Soldier Hollow Classic Sheepdog Championship & Festival (Friday)",
+    "date": "2026-05-22",
+    "venue": "Soldier Hollow, Heber Valley, UT",
+    "category": "Community",
+    "url": "https://soldierhollowclassic.com/2026-tickets/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "soldier_hollow",
+    "name": "Soldier Hollow Classic Sheepdog Championship & Festival (Saturday)",
+    "date": "2026-05-23",
+    "venue": "Soldier Hollow, Heber Valley, UT",
+    "category": "Community",
+    "url": "https://soldierhollowclassic.com/2026-tickets/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Covey Center for the Arts",
+    "date": "2026-05-23",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/185/Covey-Center-for-the-Arts",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "soldier_hollow",
+    "name": "Soldier Hollow Classic Sheepdog Championship & Festival (Sunday)",
+    "date": "2026-05-24",
+    "venue": "Soldier Hollow, Heber Valley, UT",
+    "category": "Community",
+    "url": "https://soldierhollowclassic.com/2026-tickets/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "soldier_hollow",
+    "name": "Soldier Hollow Classic Sheepdog Championship & Festival (Monday \u2014 Memorial Day)",
+    "date": "2026-05-25",
+    "venue": "Soldier Hollow, Heber Valley, UT",
+    "category": "Community",
+    "url": "https://soldierhollowclassic.com/2026-tickets/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Tad Calcara & The New Deal Swing Band",
+    "date": "2026-05-25",
+    "venue": "Covey Center for the Arts",
+    "category": "Music",
+    "url": "https://www.provo.gov/Calendar.aspx?EID=1789",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "LAUREN ALAINA",
+    "date": "2026-05-25",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/lauren-alaina/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_motorsports",
+    "name": "NASA Utah Championship Round 1",
+    "date": "2026-05-30",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "Thanksgiving Point Farmers Market",
     "date": "2026-06-04",
     "venue": "Thanksgiving Point, Lehi",
     "category": "Farmers Market",
     "url": "https://thanksgivingpoint.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "the_ruth",
+    "name": "The Addams Family",
+    "date": "2026-06-05",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Theater",
+    "url": "https://tickets.theruth.org/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "Disney\u2019s FROZEN",
+    "date": "2026-06-05",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/disneys-frozen/",
     "score": 0,
     "reason": ""
   },
@@ -1930,12 +2350,42 @@
     "reason": ""
   },
   {
+    "source": "desert_star",
+    "name": "Big Bang Theory Parody",
+    "date": "2026-06-11",
+    "venue": "Desert Star Playhouse, Murray",
+    "category": "Comedy",
+    "url": "https://desertstarplayhouse.com/2026-season/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "Thanksgiving Point Farmers Market",
     "date": "2026-06-11",
     "venue": "Thanksgiving Point, Lehi",
     "category": "Farmers Market",
     "url": "https://thanksgivingpoint.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "usuo",
+    "name": "Utah Symphony: Star Wars in Concert",
+    "date": "2026-06-12",
+    "venue": "Abravanel Hall",
+    "category": "Music",
+    "url": "https://usuo.org/schedule/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_motorsports",
+    "name": "IRPCA Race Weekend",
+    "date": "2026-06-13",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
     "score": 0,
     "reason": ""
   },
@@ -1960,12 +2410,32 @@
     "reason": ""
   },
   {
+    "source": "ski_resort",
+    "name": "Brighton Fall Bike Park Opening",
+    "date": "2026-06-20",
+    "venue": "Brighton Resort",
+    "category": "Sports",
+    "url": "https://www.brightonresort.com/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-06-20",
     "venue": "Pioneer Park, Salt Lake City",
     "category": "Farmers Market",
     "url": "https://www.slcfarmersmarket.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "RACHEL PLATTEN",
+    "date": "2026-06-22",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/rachel-platten/",
     "score": 0,
     "reason": ""
   },
@@ -1980,12 +2450,42 @@
     "reason": ""
   },
   {
+    "source": "utah_motorsports",
+    "name": "REV Performance Track Day",
+    "date": "2026-06-27",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-06-27",
     "venue": "Pioneer Park, Salt Lake City",
     "category": "Farmers Market",
     "url": "https://www.slcfarmersmarket.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "Roald Dahl\u2019s MATILDA: THE MUSICAL",
+    "date": "2026-07-03",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/roald-dahls-matilda-the-musical/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ski_resort",
+    "name": "Park City Mountain 4th of July",
+    "date": "2026-07-04",
+    "venue": "Park City Mountain",
+    "category": "Sports",
+    "url": "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx",
     "score": 0,
     "reason": ""
   },
@@ -2010,6 +2510,26 @@
     "reason": ""
   },
   {
+    "source": "usuo",
+    "name": "Deer Valley Music Festival Opening Night",
+    "date": "2026-07-10",
+    "venue": "Deer Valley",
+    "category": "Music",
+    "url": "https://usuo.org/schedule/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ski_resort",
+    "name": "Deer Valley Music Festival",
+    "date": "2026-07-10",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.deervalley.com/things-to-do/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-07-11",
@@ -2030,12 +2550,32 @@
     "reason": ""
   },
   {
+    "source": "utah_motorsports",
+    "name": "NASA Utah Championship Round 2",
+    "date": "2026-07-18",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-07-18",
     "venue": "Pioneer Park, Salt Lake City",
     "category": "Farmers Market",
     "url": "https://www.slcfarmersmarket.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "KINGS RETURN",
+    "date": "2026-07-20",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/kings-return/",
     "score": 0,
     "reason": ""
   },
@@ -2070,6 +2610,26 @@
     "reason": ""
   },
   {
+    "source": "scera_shell",
+    "name": "GUYS AND DOLLS",
+    "date": "2026-07-31",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/guys-and-dolls/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_motorsports",
+    "name": "Utah SBA Sportbike Track Day",
+    "date": "2026-08-01",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-08-01",
@@ -2086,6 +2646,16 @@
     "venue": "Thanksgiving Point, Lehi",
     "category": "Farmers Market",
     "url": "https://thanksgivingpoint.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "the_ruth",
+    "name": "Newsies",
+    "date": "2026-08-07",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Theater",
+    "url": "https://tickets.theruth.org/events",
     "score": 0,
     "reason": ""
   },
@@ -2110,6 +2680,16 @@
     "reason": ""
   },
   {
+    "source": "utah_motorsports",
+    "name": "APEX Track Days at UMC",
+    "date": "2026-08-15",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-08-15",
@@ -2130,6 +2710,16 @@
     "reason": ""
   },
   {
+    "source": "scera_shell",
+    "name": "21st Annual DANCING UNDER THE STARS",
+    "date": "2026-08-21",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/21st-annual-dancing-under-the-stars/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-08-22",
@@ -2140,12 +2730,42 @@
     "reason": ""
   },
   {
+    "source": "scera_shell",
+    "name": "DIAMOND RIO",
+    "date": "2026-08-24",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/diamond-rio/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "desert_star",
+    "name": "Scooby-Doo Parody",
+    "date": "2026-08-27",
+    "venue": "Desert Star Playhouse, Murray",
+    "category": "Comedy",
+    "url": "https://desertstarplayhouse.com/2026-season/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "Thanksgiving Point Farmers Market",
     "date": "2026-08-27",
     "venue": "Thanksgiving Point, Lehi",
     "category": "Farmers Market",
     "url": "https://thanksgivingpoint.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "HEATHER HEADLEY with the Utah Valley Symphony",
+    "date": "2026-08-29",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/heather-headley/",
     "score": 0,
     "reason": ""
   },
@@ -2166,6 +2786,36 @@
     "venue": "Thanksgiving Point, Lehi",
     "category": "Farmers Market",
     "url": "https://thanksgivingpoint.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_motorsports",
+    "name": "NASA Utah Championship Round 3",
+    "date": "2026-09-05",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "ski_resort",
+    "name": "Snowbird Oktoberfest",
+    "date": "2026-09-05",
+    "venue": "Snowbird Resort",
+    "category": "Sports",
+    "url": "https://www.snowbird.com/activities-events/events/events-calendar/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "scera_shell",
+    "name": "SIMPLY QUEEN: A LIVE TRIBUTE",
+    "date": "2026-09-05",
+    "venue": "SCERA Shell Outdoor Theatre",
+    "category": "Arts & Theater",
+    "url": "https://scera.org/events/simply-queen-a-live-tribute/",
     "score": 0,
     "reason": ""
   },
@@ -2210,6 +2860,16 @@
     "reason": ""
   },
   {
+    "source": "utah_motorsports",
+    "name": "REV Performance Track Day",
+    "date": "2026-09-19",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-09-19",
@@ -2240,12 +2900,32 @@
     "reason": ""
   },
   {
+    "source": "utah_motorsports",
+    "name": "Utah SBA Sportbike Final Round",
+    "date": "2026-10-03",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-10-03",
     "venue": "Pioneer Park, Salt Lake City",
     "category": "Farmers Market",
     "url": "https://www.slcfarmersmarket.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "the_ruth",
+    "name": "Into the Woods",
+    "date": "2026-10-09",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Theater",
+    "url": "https://tickets.theruth.org/events",
     "score": 0,
     "reason": ""
   },
@@ -2260,12 +2940,352 @@
     "reason": ""
   },
   {
+    "source": "utah_motorsports",
+    "name": "NASA Utah Championship Final Round",
+    "date": "2026-10-17",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.utahmotorsportscampus.com/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "farmers_market",
     "name": "SLC Farmers Market at Pioneer Park",
     "date": "2026-10-17",
     "venue": "Pioneer Park, Salt Lake City",
     "category": "Farmers Market",
     "url": "https://www.slcfarmersmarket.org",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "desert_star",
+    "name": "The Nutcracker Parody",
+    "date": "2026-11-12",
+    "venue": "Desert Star Playhouse, Murray",
+    "category": "Comedy",
+    "url": "https://desertstarplayhouse.com/2026-season/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "the_ruth",
+    "name": "A Christmas Carol",
+    "date": "2026-12-04",
+    "venue": "The Ruth and Nathan Hale Theater",
+    "category": "Theater",
+    "url": "https://tickets.theruth.org/events",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_university",
+    "name": "Filter Events",
+    "date": "",
+    "venue": "University of Utah, Salt Lake City",
+    "category": "Arts & Theater",
+    "url": "#",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "utah_stadium",
+    "name": "All Events",
+    "date": "",
+    "venue": "Rice-Eccles Stadium, Salt Lake City",
+    "category": "Sports",
+    "url": "https://www.stadium.utah.edu/events/monster-energy-ama-supercross-part-of-the-monster-energy-smx-world-championship/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Phat Cat Swinger",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/1203/Phat-Cat-Swinger",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Absolute Adele",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/1196/Absolute-Adele",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Departments and Divisions",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/178/Departments-and-Divisions",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Parks & Recreation",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/184/Parks-Recreation",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "MAY/JUNE",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/calendar.aspx?CID=53",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Absolute Adele with Jennifer Cella",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/1196/Absolute-Adele",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "(801) 852-7007",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "tel:8018527007",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Utilities",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/181/City-Utilities",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Fly Provo",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/provoairport",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Share Feedback or Concerns",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/SeeClickFix",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Join Our Team",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/workdayjobboard",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "(801) 852-6000",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "tel:801-852-6000",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Quick Links",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/QuickLinks.aspx?CID=15",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Notifications",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/list.aspx",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Report an Issue",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/215/Report-An-Issue",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Site Links",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/QuickLinks.aspx?CID=16",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Site Map",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/sitemap",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Accessibility",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Arts & Theater",
+    "url": "https://www.provo.gov/site/accessibility",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Tad Calcara & New Deal Swing Band",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Music",
+    "url": "https://www.provo.gov/1226/Tad-Calcara-New-Deal-Swing-Band",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "2026 Summer Band Series",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Music",
+    "url": "https://www.provo.gov/1345/2026-Summer-Band-Series",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Summer Band Series",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Music",
+    "url": "https://www.provo.gov/1345/2026-Summer-Band-Series",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "You've Got a Friend: The Songs of Carole King & James Taylor",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Music",
+    "url": "https://www.provo.gov/1228/Youve-Got-A-Friend-The-Songs-of-Carole-K",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "A Little Murder Never Hurt Anybody",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Theater",
+    "url": "https://www.provo.gov/1320/A-Little-Murder-Never-Hurt-Anybody",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Jacob Marley's Christmas Carol",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Theater",
+    "url": "https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "\"Soundsation\" Percussive Footwork Concert",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Community",
+    "url": "https://covey.provo.gov/ChooseSeats/63601",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "BYU Noteworthy & Vocal Point",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Community",
+    "url": "https://covey.provo.gov/EventAvailability?EventId=21401&ref=bookNow&scroll=timeAndDates",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "The Best is Yet to Come",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Community",
+    "url": "https://covey.provo.gov/ChooseSeats/66401",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "covey_center",
+    "name": "Swan Lake & Tap Vibes",
+    "date": "",
+    "venue": "Covey Center for the Arts",
+    "category": "Community",
+    "url": "https://covey.provo.gov/EventAvailability?EventId=28201&ref=bookNow&scroll=timeAndDates",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "obt",
+    "name": "OBT: 2026 Season",
+    "date": "",
+    "venue": "The Off Broadway Theatre",
+    "category": "Comedy",
+    "url": "https://www.theobt.org/box-office",
     "score": 0,
     "reason": ""
   },
@@ -2411,6 +3431,26 @@
   },
   {
     "source": "google_events",
+    "name": "No Such Animal",
+    "date": "Apr 4",
+    "venue": "Velour Live Music Gallery, Provo",
+    "category": "Music",
+    "url": "https://open.spotify.com/concert/2eVOfuLWreiFcJIMYqQ4U5",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Import Face-Off",
+    "date": "Apr 4",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.eventticketscenter.com/import-face-off-tooele-04-04-2026/7586575/t",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
     "name": "Salt Lake City Downtown Winter Farmers Market",
     "date": "Apr 4",
     "venue": "The Gateway",
@@ -2431,11 +3471,61 @@
   },
   {
     "source": "google_events",
+    "name": "54 Ultra",
+    "date": "Apr 6",
+    "venue": "Velour Live Music Gallery, Provo",
+    "category": "Music",
+    "url": "https://www.eventticketscenter.com/54-ultra-provo-04-06-2026/7505143/t",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
     "name": "Samara Joy",
     "date": "Apr 7",
     "venue": "Kingsbury Hall",
     "category": "Event",
     "url": "https://open.spotify.com/concert/3qnWLn0skzE1MIMYsGglyL",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Maoli",
+    "date": "Aug 21",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://www.etickets.com/concerts/reggae-reggaeton/maoli/park-city-ut/71810-41080/d",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Utah Superbike Round 4",
+    "date": "Aug 29",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.visitsaltlake.com/event/outdoor-recreation/utah-superbike-round-4/77766/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Utah Superbike Round 3",
+    "date": "Aug 8",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.visitsaltlake.com/event/outdoor-recreation/utah-superbike-round-3/77762/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Walker Hayes",
+    "date": "Aug 8",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://open.spotify.com/concert/0EIrAfEp1X4xXUg66Tb76v",
     "score": 0,
     "reason": ""
   },
@@ -2450,12 +3540,52 @@
     "reason": ""
   },
   {
+    "source": "thanksgiving_point",
+    "name": "SHEroes in STEMFriday, March 6Celebrate International Women\u2019s Day at SHEroes in STEM, a hands-on event that highlights the impact of women in science, technology, engineering, and math. Families and young learners are invited to explore diverse STEM industries through interactive activities, meet inspiring role models, and discover the stories of how women have shaped, and continue to shape, STEM careers around the world.Get Tickets",
+    "date": "Friday, Ma",
+    "venue": "Thanksgiving Point, Lehi",
+    "category": "Community",
+    "url": "https://thanksgivingpoint.org/events/sheroes-in-stem/",
+    "score": 0,
+    "reason": ""
+  },
+  {
     "source": "google_events",
     "name": "Logan River Trail 10K & 5K",
     "date": "Jul 18",
     "venue": "",
     "category": "Event",
     "url": "https://runsignup.com/Race/142117/Sponsor/556791",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "38 Special",
+    "date": "Jul 24",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://open.spotify.com/concert/4iUdLHHfwINYIVPBXdzLMS",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Utah Superbike Round 2",
+    "date": "Jun 13",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.visitsaltlake.com/event/sports-and-outdoors/utah-superbike-round-2/76660/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "2026 Park City Champions Quarterly Mastermind",
+    "date": "Jun 24",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://web.cvent.com/event/4ad77ff8-9bd7-4d39-86b5-821f5063b76d/summary",
     "score": 0,
     "reason": ""
   },
@@ -2486,6 +3616,26 @@
     "venue": "Park City, Utah",
     "category": "Event",
     "url": "https://www.runguides.com/event/2354/park-city-trail-series-5k",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Apr\u00e8s at the Airstream - Canyons Village at Park City Mountain",
+    "date": "Mar 20",
+    "venue": "Park City Mountain",
+    "category": "Sports",
+    "url": "https://www.cityspark.com/html5-calendar/details/apr-s-at-the-airstream-canyons-village-at-park-city-mountain/17393940/2026-03-20T14",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Lalo Beach Club",
+    "date": "Mar 20",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.cityspark.com/html5-calendar/details/lalo-beach-club/17881615/2026-03-20T11",
     "score": 0,
     "reason": ""
   },
@@ -2596,6 +3746,46 @@
     "venue": "Capitol Theatre",
     "category": "Event",
     "url": "https://www.visitsaltlake.com/event/dance/wild-ideas/76358/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Solitude Nordic Nights",
+    "date": "Mar 21",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://www.solitudemountain.com/things-to-do/events-and-activities/nordic-nights_march-weekend-2",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Women on Weekends",
+    "date": "Mar 21",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://www.solitudemountain.com/things-to-do/events-and-activities/women-on-weekends-march-21",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "The Proper Way",
+    "date": "Mar 21",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://open.spotify.com/concert/2MpFdyDG2g4U1s8ro4Z5Dd",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Slopeside Sets @ Chute Eleven: me n \u00fc",
+    "date": "Mar 21",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.deervalley.com/things-to-do/events/slopeside-sets-at-chute-eleven-me-n-u-032126",
     "score": 0,
     "reason": ""
   },
@@ -2751,6 +3941,36 @@
   },
   {
     "source": "google_events",
+    "name": "Victor Jones",
+    "date": "Mar 24",
+    "venue": "Velour Live Music Gallery, Provo",
+    "category": "Music",
+    "url": "https://open.spotify.com/concert/3FwvkIuHHhTB5tEwNTmHrb",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Valley Tan with \u201cJack Keetley\u201d",
+    "date": "Mar 24",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.deervalley.com/things-to-do/events/high-west-and-history-on-the-slopes-march",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Last Tracks 2026 - Park City Utah",
+    "date": "Mar 25",
+    "venue": "Park City Mountain",
+    "category": "Sports",
+    "url": "https://events.humanitix.com/host/central-division-nsp",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
     "name": "JIMBO'S 'JOAN! Can We Laugh?! Tour",
     "date": "Mar 25",
     "venue": "Wiseguys Comedy Club Downtown Salt Lake City",
@@ -2771,11 +3991,61 @@
   },
   {
     "source": "google_events",
+    "name": "Marlon Funaki",
+    "date": "Mar 26",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://open.spotify.com/concert/6h3Aq9DWbczOW8SJooA233",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "SKI FEST - Friday, March 27 @ Solitude Mountain Resort",
+    "date": "Mar 27",
+    "venue": "Alta Ski Area",
+    "category": "Sports",
+    "url": "https://www.eventbrite.com/e/ski-fest-friday-march-27-solitude-mountain-resort-tickets-1984446389571",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Beats & Bubbles @ Chute Eleven: Beachcrimes",
+    "date": "Mar 27",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.deervalley.com/things-to-do/events/beats-and-bubbles-at-chute-eleven-beachcrimes-032726",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
     "name": "Cat Clyde",
     "date": "Mar 27",
     "venue": "The State Room",
     "category": "Event",
     "url": "https://open.spotify.com/concert/2s2fMjgBXVl2ZbKpxDcFJF",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Electric Guest",
+    "date": "Mar 28",
+    "venue": "Park City Mountain",
+    "category": "Sports",
+    "url": "https://open.spotify.com/concert/7hzsnQTFxKnKNW5nesC0Ug",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Shred for Red Fundraiser",
+    "date": "Mar 28",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.deervalley.com/things-to-do/events/shred-for-red",
     "score": 0,
     "reason": ""
   },
@@ -2811,6 +4081,26 @@
   },
   {
     "source": "google_events",
+    "name": "ShipSummit 2026",
+    "date": "Mar 31",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.govevents.com/event/16656",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "AAAP Spring 2026 Conference in Park City, Utah",
+    "date": "May 18",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://www.cityspark.com/html5-calendar/details/aaap-spring-2026-conference-in-park-city-utah/18027666/2026-05-18T08",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
     "name": "Canyon Road 10K & 5K",
     "date": "May 2",
     "venue": "",
@@ -2821,11 +4111,91 @@
   },
   {
     "source": "google_events",
+    "name": "Utah Superbike Round 1",
+    "date": "May 23",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.visitsaltlake.com/event/sports-and-outdoors/utah-superbike-round-1/76660/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Bug Hunter, The Narcissist Cookbook",
+    "date": "May 28",
+    "venue": "Velour Live Music Gallery, Provo",
+    "category": "Music",
+    "url": "https://open.spotify.com/concert/6lewshvz5PFFz5OOnhWZpz",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
     "name": "Shoreline 10K & 5K",
     "date": "May 30",
     "venue": "Canyon Entrance Park",
     "category": "Event",
     "url": "https://discover.events.com/us/utah/north-logan/e/sports/shoreline-10k-5k-canyon-entrance-park-456337119",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "FCCI Gathering 2026: All Things New",
+    "date": "Oct 4",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://events.humanitix.com/fcci-gathering-2026-all-things-new",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "thanksgiving_point",
+    "name": "SHEroes in STEMSaturday, March 7Celebrate International Women\u2019s Day at SHEroes in STEM, a hands-on event that highlights the impact of women in science, technology, engineering, and math. Families and young learners are invited to explore diverse STEM industries through interactive activities, meet inspiring role models, and discover the stories of how women have shaped, and continue to shape, STEM careers around the world.Get Tickets",
+    "date": "Saturday, ",
+    "venue": "Thanksgiving Point, Lehi",
+    "category": "Community",
+    "url": "https://thanksgivingpoint.org/events/sheroes-in-stem/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "thanksgiving_point",
+    "name": "Super STEM SaturdaysSaturday, March 289:00 AMThe amazing world of STEM takes center stage at Thanksgiving Point.Each Super STEM Saturday transforms one of our discovery centers into a hands-on adventure zone where kids and families can explore science, technology, engineering, and math through exciting, themed activity tables and programs.From rocket launches and coding challenges to pollinator labs and farm tech experiments, every Super STEM Saturday invites kids and families to discover the wonder of how things work.Get Tickets",
+    "date": "Saturday, ",
+    "venue": "Thanksgiving Point, Lehi",
+    "category": "Community",
+    "url": "https://thanksgivingpoint.org/events/super-stem-saturdays/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "thanksgiving_point",
+    "name": "Curiosity CircusSaturday, April 410:00 AMJoin Curious George and the Man with the Yellow Hat for a circus-inspired day of hands-on STEM adventures at the Museum of Natural Curiosity.Build, test, balance, spin, and explore as you discover the science behind the circus acts. From juggling and tightrope walking to a carousel and magic, kids including forces of gravity, motion, simple machines, and problem-solving.Get Tickets",
+    "date": "Saturday, ",
+    "venue": "Thanksgiving Point, Lehi",
+    "category": "Community",
+    "url": "https://thanksgivingpoint.org/events/curiosity-circus/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Utah Superbike Round 5",
+    "date": "Sep 19",
+    "venue": "Utah Motorsports Campus, Tooele",
+    "category": "Sports",
+    "url": "https://www.visitsaltlake.com/event/outdoor-recreation/utah-superbike-round-5/77768/",
+    "score": 0,
+    "reason": ""
+  },
+  {
+    "source": "google_events",
+    "name": "Women's Epic 10k at Deer Valley Resort",
+    "date": "Sep 26",
+    "venue": "Deer Valley Resort",
+    "category": "Sports",
+    "url": "https://runsignup.com/Race/159875/Sponsor/648156",
     "score": 0,
     "reason": ""
   }
