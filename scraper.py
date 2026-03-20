@@ -55,50 +55,12 @@ def fetch_ticketmaster() -> list[dict]:
 
 
 def fetch_eventbrite() -> list[dict]:
-    key = os.environ.get("EVENTBRITE_API_KEY", "")
-    if not key:
-        print("  Eventbrite: no API key, skipping")
-        return []
-    headers = {"Authorization": f"Bearer {key}"}
-    events = []
-    # Use the organizations/me endpoint to find org ID, then search by location
-    # Fallback: use the listings discovery endpoint
-    try:
-        # Get events near location via the newer listings endpoint
-        r = requests.get(
-            "https://www.eventbriteapi.com/v3/events/",
-            headers=headers,
-            params={
-                "location.latitude": LAT,
-                "location.longitude": LNG,
-                "location.within": f"{RADIUS_MILES}mi",
-                "start_date.range_start": NOW.strftime(FMT),
-                "start_date.range_end": END.strftime(FMT),
-                "expand": "venue",
-                "status": "live",
-            },
-            timeout=10,
-        )
-        if r.status_code in (400, 404, 405):
-            print(f"  Eventbrite: API unavailable ({r.status_code}) — check key or API access")
-            return []
-        r.raise_for_status()
-        data = r.json()
-        for e in data.get("events", []):
-            venue = e.get("venue") or {}
-            name = e.get("name", {})
-            events.append({
-                "source": "eventbrite",
-                "name": name.get("text", "") if isinstance(name, dict) else str(name),
-                "date": (e.get("start", {}).get("local", "") or "")[:10],
-                "venue": venue.get("name", ""),
-                "category": e.get("category_id", ""),
-                "url": e.get("url", ""),
-            })
-    except Exception as ex:
-        print(f"  Eventbrite error: {ex}")
-    print(f"  Eventbrite: {len(events)} events")
-    return events
+    """
+    Eventbrite deprecated their public location-based search API in 2023.
+    Eventbrite events are now caught via the Google Events SerpAPI queries instead.
+    """
+    print("  Eventbrite: using SerpAPI for discovery instead")
+    return []
 
 
 def fetch_bandsintown() -> list[dict]:
