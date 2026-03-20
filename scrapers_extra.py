@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; ActivityScraper/1.0)"}
+LAT, LNG = 40.3916, -111.8508
 NOW = datetime.utcnow()
 END = NOW + timedelta(days=30)
 FMT = "%Y-%m-%dT%H:%M:%SZ"
@@ -27,6 +28,8 @@ TICKETMASTER_VENUE_IDS = {
 }
 
 
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
 def _get(url: str) -> BeautifulSoup | None:
     try:
         r = requests.get(url, headers=HEADERS, timeout=10)
@@ -37,7 +40,7 @@ def _get(url: str) -> BeautifulSoup | None:
         return None
 
 
-def _serpapi(query: str, api_key: str, venue: str, category: str, url: str) -> list[dict]:
+def _serpapi(query: str, api_key: str, venue: str, category: str, fallback_url: str) -> list[dict]:
     events = []
     try:
         r = requests.get("https://serpapi.com/search", params={
@@ -52,14 +55,20 @@ def _serpapi(query: str, api_key: str, venue: str, category: str, url: str) -> l
                 "date": e.get("date", {}).get("start_date", ""),
                 "venue": venue or e.get("venue", {}).get("name", ""),
                 "category": category,
-                "url": e.get("link", url),
+                "url": e.get("link", fallback_url),
             })
     except Exception as ex:
         print(f"    SerpAPI error '{query}': {ex}")
     return events
 
 
+def _dedup(events: list[dict]) -> list[dict]:
+    seen = set()
+    return [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
+
+
 # ── Ticketmaster venue-specific queries ───────────────────────────────────────
+
 def fetch_ticketmaster_venues() -> list[dict]:
     key = os.environ.get("TICKETMASTER_API_KEY", "")
     if not key:
@@ -92,11 +101,8 @@ def fetch_ticketmaster_venues() -> list[dict]:
 
 
 # ── PredictHQ ─────────────────────────────────────────────────────────────────
+
 def fetch_predicthq() -> list[dict]:
-    """
-    PredictHQ aggregates events from 900+ sources.
-    Free tier: 1,000 events/month. Sign up at predicthq.com.
-    """
     key = os.environ.get("PREDICTHQ_API_KEY", "")
     if not key:
         print("    PredictHQ: no API key, skipping")
@@ -118,12 +124,13 @@ def fetch_predicthq() -> list[dict]:
         )
         r.raise_for_status()
         for e in r.json().get("results", []):
-            loc = e.get("geo", {}).get("geometry", {}).get("coordinates", [None, None])
+            entities = e.get("entities", [])
+            venue_name = entities[0].get("name", "") if entities else ""
             events.append({
                 "source": "predicthq",
                 "name": e.get("title", ""),
                 "date": (e.get("start", "") or "")[:10],
-                "venue": e.get("entities", [{}])[0].get("name", "") if e.get("entities") else "",
+                "venue": venue_name,
                 "category": e.get("category", "").replace("-", " ").title(),
                 "url": f"https://www.predicthq.com/events/{e.get('id', '')}",
             })
@@ -134,8 +141,8 @@ def fetch_predicthq() -> list[dict]:
 
 
 # ── VisitSaltLake.com ─────────────────────────────────────────────────────────
+
 def fetch_visit_salt_lake() -> list[dict]:
-    """VisitSaltLake pulls from NowPlayingUtah — scrape their events page."""
     events = []
     soup = _get("https://www.visitsaltlake.com/events/")
     if soup:
@@ -156,52 +163,17 @@ def fetch_visit_salt_lake() -> list[dict]:
                 "category": "Community",
                 "url": url,
             })
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    VisitSaltLake: {len(unique)} events")
-    return unique
-
-
-# ── Silicon Slopes ────────────────────────────────────────────────────────────
-def fetch_silicon_slopes() -> list[dict]:
-    """Silicon Slopes Utah tech & startup events."""
-    events = []
-    for url in ["https://app.siliconslopes.com/activities",
-                "https://siliconslopes.com/events/"]:
-        soup = _get(url)
-        if not soup:
-            continue
-        for item in soup.select("article, .event, .activity, .card, [class*='event']"):
-            name = item.select_one("h2, h3, h4, .title, [class*='title']")
-            date = item.select_one("time, .date, [class*='date']")
-            link = item.select_one("a")
-            if not name or len(name.get_text(strip=True)) < 3:
-                continue
-            href = link["href"] if link and link.get("href") else url
-            if href.startswith("/"):
-                href = "https://app.siliconslopes.com" + href
-            events.append({
-                "source": "silicon_slopes",
-                "name": name.get_text(strip=True),
-                "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
-                "venue": "Silicon Slopes, Utah",
-                "category": "Tech",
-                "url": href,
-            })
-        if events:
-            break
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    Silicon Slopes: {len(unique)} events")
-    return unique
+    print(f"    VisitSaltLake: {len(_dedup(events))} events")
+    return _dedup(events)
 
 
 # ── Velour Live Music ─────────────────────────────────────────────────────────
+
 def fetch_velour() -> list[dict]:
     events = []
     current = NOW
     while current <= END:
-        if current.weekday() == 3:
+        if current.weekday() == 3:  # Thursday open mic
             events.append({
                 "source": "velour",
                 "name": "Velour Open Mic Night",
@@ -216,13 +188,12 @@ def fetch_velour() -> list[dict]:
         events += _serpapi("Velour Live Music Provo shows", api_key,
                            "Velour Live Music Gallery, Provo", "Music",
                            "https://velourlive.com/shows")
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    Velour: {len(unique)} events")
-    return unique
+    print(f"    Velour: {len(_dedup(events))} events")
+    return _dedup(events)
 
 
 # ── Thanksgiving Point ────────────────────────────────────────────────────────
+
 def fetch_thanksgiving_point() -> list[dict]:
     events = []
     now_str = NOW.strftime("%Y-%m-%d")
@@ -240,7 +211,7 @@ def fetch_thanksgiving_point() -> list[dict]:
             events.append({
                 "source": "thanksgiving_point",
                 "name": name.get_text(strip=True),
-                "date": (date.get("datetime", date.get_text(strip=True))[:10] if date else ""),
+                "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
                 "venue": "Thanksgiving Point, Lehi",
                 "category": "Community",
                 "url": url,
@@ -257,13 +228,12 @@ def fetch_thanksgiving_point() -> list[dict]:
                 events.append({"source": "thanksgiving_point", "name": n, "date": start,
                                 "venue": "Thanksgiving Point, Lehi", "category": "Community",
                                 "url": "https://thanksgivingpoint.org/calendar/"})
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    Thanksgiving Point: {len(unique)} events")
-    return unique
+    print(f"    Thanksgiving Point: {len(_dedup(events))} events")
+    return _dedup(events)
 
 
 # ── Utah Motorsports Campus ───────────────────────────────────────────────────
+
 def fetch_utah_motorsports() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
     known = [
@@ -288,18 +258,19 @@ def fetch_utah_motorsports() -> list[dict]:
               for n, d in known if d >= now_str]
     api_key = os.environ.get("SERPAPI_API_KEY", "") or os.environ.get("SERPAPI_KEY", "")
     if api_key:
-        extra = _serpapi("Utah Motorsports Campus racing 2026", api_key,
-                         "Utah Motorsports Campus, Tooele", "Sports",
-                         "https://www.utahmotorsportscampus.com/")
         existing = {e["name"] for e in events}
-        events += [e for e in extra if e["name"] not in existing]
+        for e in _serpapi("Utah Motorsports Campus racing 2026", api_key,
+                          "Utah Motorsports Campus, Tooele", "Sports",
+                          "https://www.utahmotorsportscampus.com/"):
+            if e["name"] not in existing:
+                events.append(e)
     print(f"    Utah Motorsports Campus: {len(events)} events")
     return events
 
 
-# ── University Event Calendars ────────────────────────────────────────────────
+# ── University Calendars ──────────────────────────────────────────────────────
+
 def fetch_byu_events() -> list[dict]:
-    """BYU iCal export blocks scrapers — parse HTML calendar page instead."""
     events = []
     pages = [
         ("https://calendar.byu.edu/arts-entertainment", "Arts & Entertainment"),
@@ -309,11 +280,8 @@ def fetch_byu_events() -> list[dict]:
         soup = _get(page_url)
         if not soup:
             continue
-        # Events are in data-content-type="event" containers
-        # Title is in h3 links, date is in the surrounding text
         for item in soup.select("[data-content-type='event'], .event-card, article"):
             name = item.select_one("h2, h3, h4, a")
-            date_text = item.get_text(" ", strip=True)
             link = item.select_one("a")
             if not name:
                 continue
@@ -321,7 +289,7 @@ def fetch_byu_events() -> list[dict]:
             if not name_str or len(name_str) < 3:
                 continue
             url = link["href"] if link and link.get("href") else page_url
-            # Extract date like "Saturday, March 14" from surrounding text
+            date_text = item.get_text(" ", strip=True)
             date = ""
             match = re.search(
                 r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})',
@@ -336,15 +304,11 @@ def fetch_byu_events() -> list[dict]:
             events.append({"source": "byu", "name": name_str, "date": date,
                            "venue": "Brigham Young University, Provo",
                            "category": category, "url": url})
-    # Deduplicate by name
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    BYU Events: {len(unique)} events")
-    return unique
+    print(f"    BYU Events: {len(_dedup(events))} events")
+    return _dedup(events)
 
 
 def fetch_slcc_events() -> list[dict]:
-    """SLCC Localist API — no type filtering, use keyword search."""
     events = []
     try:
         r = requests.get(
@@ -353,8 +317,7 @@ def fetch_slcc_events() -> list[dict]:
             headers=HEADERS, timeout=10,
         )
         r.raise_for_status()
-        data = r.json()
-        for e in data.get("events", []):
+        for e in r.json().get("events", []):
             evt = e.get("event", e)
             name = evt.get("title", "")
             if not name:
@@ -414,10 +377,10 @@ def fetch_uvu_events() -> list[dict]:
 
 
 def fetch_utah_university_events() -> list[dict]:
-    events = []
     skip = {"filter events", "all events", "submit an event", "home", "search",
             "sign in", "contact", "about", "calendar policies", "quick links",
             "site links", "notifications", "report an issue"}
+    events = []
     soup = _get("https://events.utah.edu/")
     if soup:
         for item in soup.select("article, .event, .tribe-event, .eventitem"):
@@ -439,10 +402,9 @@ def fetch_utah_university_events() -> list[dict]:
 
 
 def fetch_utah_stadium_events() -> list[dict]:
-    events = []
     skip = {"filter events", "all events", "submit an event", "home", "search",
-            "sign in", "contact", "about", "calendar policies", "quick links",
-            "site links", "notifications", "report an issue"}
+            "sign in", "contact", "about", "calendar policies"}
+    events = []
     soup = _get("https://www.stadium.utah.edu/all-events/")
     if soup:
         for item in soup.select("article, .event, .tribe-event"):
@@ -463,7 +425,8 @@ def fetch_utah_stadium_events() -> list[dict]:
     return events
 
 
-# ── Desert Star Playhouse ─────────────────────────────────────────────────────
+# ── Performance Venues ────────────────────────────────────────────────────────
+
 def fetch_desert_star() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
     season = [
@@ -481,7 +444,6 @@ def fetch_desert_star() -> list[dict]:
     return events
 
 
-# ── Utah Symphony & Opera (USUO) ──────────────────────────────────────────────
 def fetch_usuo() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
     season = [
@@ -500,112 +462,122 @@ def fetch_usuo() -> list[dict]:
     return events
 
 
-# ── Ski Resort Events ─────────────────────────────────────────────────────────
-def fetch_ski_resort_events() -> list[dict]:
+def fetch_the_ruth() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
-    known = [
-        ("Alta Spring Skiing & Closing Day",   "2026-04-19", "Alta Ski Area",       "https://www.alta.com/events"),
-        ("Snowbird Oktoberfest",               "2026-09-05", "Snowbird Resort",     "https://www.snowbird.com/activities-events/events/events-calendar/"),
-        ("Snowbird Spring Ski Race Series",    "2026-03-28", "Snowbird Resort",     "https://www.snowbird.com/activities-events/events/events-calendar/"),
-        ("Solitude Spring Concert Series",     "2026-03-21", "Solitude Mountain",   "https://www.solitudemountain.com/things-to-do/events-and-activities"),
-        ("Solitude Closing Day Party",         "2026-04-12", "Solitude Mountain",   "https://www.solitudemountain.com/things-to-do/events-and-activities"),
-        ("Deer Valley Spring Celebration",     "2026-04-05", "Deer Valley Resort",  "https://www.deervalley.com/things-to-do/events"),
-        ("Deer Valley Music Festival",         "2026-07-10", "Deer Valley Resort",  "https://www.deervalley.com/things-to-do/events"),
-        ("Brighton Closing Day Festival",      "2026-04-19", "Brighton Resort",     "https://www.brightonresort.com/events"),
-        ("Brighton Fall Bike Park Opening",    "2026-06-20", "Brighton Resort",     "https://www.brightonresort.com/events"),
-        ("Park City Mountain Closing Day",     "2026-04-19", "Park City Mountain",  "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
-        ("Park City Mountain 4th of July",     "2026-07-04", "Park City Mountain",  "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
+    season = [
+        ("Fiddler on the Roof",  "2026-01-30", "2026-03-21"),
+        ("Pride and Prejudice",  "2026-04-03", "2026-05-23"),
+        ("The Addams Family",    "2026-06-05", "2026-07-25"),
+        ("Newsies",              "2026-08-07", "2026-09-26"),
+        ("Into the Woods",       "2026-10-09", "2026-11-21"),
+        ("A Christmas Carol",    "2026-12-04", "2026-12-23"),
     ]
-    events = [{"source": "ski_resort", "name": n, "date": d, "venue": v,
-               "category": "Sports", "url": u}
-              for n, d, v, u in known if d >= now_str]
-    api_key = os.environ.get("SERPAPI_API_KEY", "") or os.environ.get("SERPAPI_KEY", "")
-    if api_key:
-        for q, v, u in [
-            ("Alta ski resort events 2026", "Alta Ski Area", "https://www.alta.com/events"),
-            ("Snowbird resort events 2026", "Snowbird Resort", "https://www.snowbird.com/activities-events/events/events-calendar/"),
-            ("Park City Mountain events 2026", "Park City Mountain", "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
-            ("Deer Valley events 2026", "Deer Valley Resort", "https://www.deervalley.com/things-to-do/events"),
-        ]:
-            existing = {e["name"] for e in events}
-            for e in _serpapi(q, api_key, v, "Sports", u):
-                if e["name"] not in existing:
-                    events.append(e)
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    Ski Resort Events: {len(unique)} events")
-    return unique
-
-
-# ── Utah Olympic Legacy Foundation ────────────────────────────────────────────
-def fetch_utah_olympic() -> list[dict]:
-    events = []
-    pages = [
-        ("https://utaholympiclegacy.org/soho-events/", "Soldier Hollow Nordic Center"),
-        ("https://utaholympiclegacy.org/park-events/", "Utah Olympic Park"),
-        ("https://utaholympiclegacy.org/oval-events/", "Utah Olympic Oval"),
-    ]
-    for url, venue in pages:
-        soup = _get(url)
-        if not soup:
-            continue
-        current_date = ""
-        for tag in soup.select("h3, h4, a[href*='/event/']"):
-            if tag.name in ("h3", "h4"):
-                text = tag.get_text(strip=True)
-                match = re.search(
-                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})', text)
-                if match:
-                    try:
-                        current_date = datetime.strptime(
-                            f"{match.group(1)} {match.group(2)} 2026", "%B %d %Y"
-                        ).strftime("%Y-%m-%d")
-                    except ValueError:
-                        current_date = ""
-            elif tag.name == "a" and "/event/" in tag.get("href", ""):
-                name = tag.get_text(strip=True)
-                if not name or len(name) < 3:
-                    continue
-                href = tag["href"]
-                if href.startswith("/"):
-                    href = "https://utaholympiclegacy.org" + href
-                events.append({"source": "utah_olympic", "name": name, "date": current_date,
-                                "venue": venue, "category": "Sports", "url": href})
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    Utah Olympic Legacy: {len(unique)} events")
-    return unique
-
-
-# ── Soldier Hollow Classic ────────────────────────────────────────────────────
-def fetch_soldier_hollow() -> list[dict]:
-    now_str = NOW.strftime("%Y-%m-%d")
-    days = [("2026-05-22", "Friday"), ("2026-05-23", "Saturday"),
-            ("2026-05-24", "Sunday"), ("2026-05-25", "Monday — Memorial Day")]
-    events = [{"source": "soldier_hollow",
-               "name": f"Soldier Hollow Classic Sheepdog Championship & Festival ({label})",
-               "date": date, "venue": "Soldier Hollow, Heber Valley, UT",
-               "category": "Community", "url": "https://soldierhollowclassic.com/2026-tickets/"}
-              for date, label in days if date >= now_str]
-    print(f"    Soldier Hollow Classic: {len(events)} events")
+    events = [{"source": "the_ruth", "name": n, "date": start,
+               "venue": "The Ruth and Nathan Hale Theater",
+               "category": "Theater", "url": "https://tickets.theruth.org/events"}
+              for n, start, end in season if end >= now_str]
+    print(f"    The Ruth: {len(events)} events")
     return events
 
 
-# ── Covey Center for the Arts ─────────────────────────────────────────────────
+def fetch_scera_shell() -> list[dict]:
+    events = []
+    for path in ["/event-category/scera-shell-outdoor-theatre/",
+                 "/event-category/concerts/", "/event-category/live-theater/"]:
+        soup = _get(f"https://scera.org{path}")
+        if not soup:
+            continue
+        for item in soup.select("h2, h3"):
+            link = item.find("a")
+            if not link:
+                continue
+            name = link.get_text(strip=True)
+            if not name or len(name) < 3:
+                continue
+            url = link["href"] if link.get("href") else "https://scera.org"
+            date_tag = item.find_next(string=re.compile(
+                r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2}'))
+            date_text = ""
+            if date_tag:
+                match = re.search(r'(\w+ \d{1,2})[^,]*,?\s*(20\d{2})?', date_tag)
+                if match:
+                    try:
+                        year = match.group(2) or "2026"
+                        date_text = datetime.strptime(
+                            f"{match.group(1)} {year}", "%B %d %Y"
+                        ).strftime("%Y-%m-%d")
+                    except ValueError:
+                        pass
+            events.append({"source": "scera_shell", "name": name, "date": date_text,
+                           "venue": "SCERA Shell Outdoor Theatre",
+                           "category": "Arts & Theater", "url": url})
+    print(f"    SCERA Shell: {len(_dedup(events))} events")
+    return _dedup(events)
+
+
+def fetch_scera() -> list[dict]:
+    events = []
+    soup = _get("https://www.scera.org/events/")
+    if soup:
+        for item in soup.select(".event, article, .tribe-event"):
+            name = item.select_one("h2, h3, .entry-title, .tribe-event-url")
+            date = item.select_one("time, .tribe-event-date-start, .event-date")
+            link = item.select_one("a")
+            if not name:
+                continue
+            url = link["href"] if link and link.get("href") else "https://www.scera.org/events/"
+            events.append({"source": "scera", "name": name.get_text(strip=True),
+                           "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
+                           "venue": "SCERA Center for the Arts",
+                           "category": "Arts & Theater", "url": url})
+    print(f"    SCERA: {len(events)} events")
+    return events
+
+
+def fetch_obt() -> list[dict]:
+    now_str = NOW.strftime("%Y-%m-%d")
+    season = [
+        ("OBT: Greased",            "2026-01-08", "2026-03-28"),
+        ("OBT: The Princess Bride", "2026-04-02", "2026-06-06"),
+        ("OBT: Big Bang Parody",    "2026-06-11", "2026-08-22"),
+        ("OBT: Scooby-Doo Parody",  "2026-08-27", "2026-11-07"),
+        ("OBT: Nutcracker Parody",  "2026-11-12", "2027-01-02"),
+    ]
+    events = [{"source": "obt", "name": name, "date": start,
+               "venue": "The Off Broadway Theatre", "category": "Comedy",
+               "url": "https://offbroadwaytheatreco.ludus.com/index.php"}
+              for name, start, end in season if end >= now_str]
+    current = NOW
+    while current <= END:
+        if current.weekday() in (4, 5):  # Fri/Sat improv
+            events.append({
+                "source": "obt",
+                "name": "OBT: Laughing Stock Improv Comedy",
+                "date": current.strftime("%Y-%m-%d"),
+                "venue": "The Off Broadway Theatre",
+                "category": "Comedy",
+                "url": "https://offbroadwaytheatreco.ludus.com/index.php",
+            })
+        current += timedelta(days=1)
+    print(f"    OBT: {len(events)} events")
+    return events
+
+
 def fetch_covey_center() -> list[dict]:
     events = []
     known_shows = [
-        ("https://www.provo.gov/1203/Phat-Cat-Swinger",                        "Phat Cat Swinger",                                              "Arts & Theater"),
-        ("https://www.provo.gov/1196/Absolute-Adele",                          "Absolute Adele",                                                "Arts & Theater"),
-        ("https://www.provo.gov/1226/Tad-Calcara-New-Deal-Swing-Band",         "Tad Calcara & New Deal Swing Band",                             "Music"),
-        ("https://www.provo.gov/1345/2026-Summer-Band-Series",                 "2026 Summer Band Series",                                       "Music"),
-        ("https://www.provo.gov/1308/Youve-Got-A-Friend-The-Songs-of-Carole-K","You've Got A Friend: The Songs of Carole King & James Taylor",  "Music"),
-        ("https://www.provo.gov/1320/A-Little-Murder-Never-Hurt-Anybody",      "A Little Murder Never Hurt Anybody",                            "Theater"),
-        ("https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol",           "Jacob Marley's Christmas Carol",                                "Theater"),
+        ("https://www.provo.gov/1203/Phat-Cat-Swinger",                         "Phat Cat Swinger",                                             "Arts & Theater"),
+        ("https://www.provo.gov/1196/Absolute-Adele",                           "Absolute Adele",                                               "Arts & Theater"),
+        ("https://www.provo.gov/1226/Tad-Calcara-New-Deal-Swing-Band",          "Tad Calcara & New Deal Swing Band",                            "Music"),
+        ("https://www.provo.gov/1345/2026-Summer-Band-Series",                  "2026 Summer Band Series",                                      "Music"),
+        ("https://www.provo.gov/1308/Youve-Got-A-Friend-The-Songs-of-Carole-K", "You've Got A Friend: The Songs of Carole King & James Taylor", "Music"),
+        ("https://www.provo.gov/1320/A-Little-Murder-Never-Hurt-Anybody",       "A Little Murder Never Hurt Anybody",                           "Theater"),
+        ("https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol",            "Jacob Marley's Christmas Carol",                               "Theater"),
     ]
     nav_skip = {"support", "tickets", "visit", "classes", "rentals", "about", "home",
                 "search", "contact", "giveaway", "donate", "membership", "volunteer",
                 "careers", "dining", "privacy policy", "accessibility", "site map"}
+    known_urls = {s[0] for s in known_shows}
 
     for url, name, category in known_shows:
         date_text = ""
@@ -628,9 +600,7 @@ def fetch_covey_center() -> list[dict]:
         events.append({"source": "covey_center", "name": name, "date": date_text,
                        "venue": "Covey Center for the Arts", "category": category, "url": url})
 
-    # Scan listing pages for any additional shows matching /NNNN/Show-Name pattern
     show_url_pattern = re.compile(r'^/\d{4}/[A-Za-z]')
-    known_urls = {s[0] for s in known_shows}
     for listing_url, category in [
         ("https://www.provo.gov/1023/Covey-Presents",  "Arts & Theater"),
         ("https://www.provo.gov/1220/Free-Concerts",   "Music"),
@@ -668,127 +638,106 @@ def fetch_covey_center() -> list[dict]:
                         except ValueError:
                             pass
             events.append({"source": "covey_center", "name": name, "date": date_text,
-                           "venue": "Covey Center for the Arts", "category": category, "url": full_url})
+                           "venue": "Covey Center for the Arts", "category": category,
+                           "url": full_url})
 
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    Covey Center: {len(unique)} events")
-    return unique
+    print(f"    Covey Center: {len(_dedup(events))} events")
+    return _dedup(events)
 
 
-# ── The Ruth and Nathan Hale Theater ─────────────────────────────────────────
-def fetch_the_ruth() -> list[dict]:
+# ── Outdoor & Recreation ──────────────────────────────────────────────────────
+
+def fetch_ski_resort_events() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
-    season = [
-        ("Fiddler on the Roof",  "2026-01-30", "2026-03-21"),
-        ("Pride and Prejudice",  "2026-04-03", "2026-05-23"),
-        ("The Addams Family",    "2026-06-05", "2026-07-25"),
-        ("Newsies",              "2026-08-07", "2026-09-26"),
-        ("Into the Woods",       "2026-10-09", "2026-11-21"),
-        ("A Christmas Carol",    "2026-12-04", "2026-12-23"),
+    known = [
+        ("Alta Spring Skiing & Closing Day",   "2026-04-19", "Alta Ski Area",       "https://www.alta.com/events"),
+        ("Snowbird Oktoberfest",               "2026-09-05", "Snowbird Resort",     "https://www.snowbird.com/activities-events/events/events-calendar/"),
+        ("Snowbird Spring Ski Race Series",    "2026-03-28", "Snowbird Resort",     "https://www.snowbird.com/activities-events/events/events-calendar/"),
+        ("Solitude Spring Concert Series",     "2026-03-21", "Solitude Mountain",   "https://www.solitudemountain.com/things-to-do/events-and-activities"),
+        ("Solitude Closing Day Party",         "2026-04-12", "Solitude Mountain",   "https://www.solitudemountain.com/things-to-do/events-and-activities"),
+        ("Deer Valley Spring Celebration",     "2026-04-05", "Deer Valley Resort",  "https://www.deervalley.com/things-to-do/events"),
+        ("Deer Valley Music Festival",         "2026-07-10", "Deer Valley Resort",  "https://www.deervalley.com/things-to-do/events"),
+        ("Brighton Closing Day Festival",      "2026-04-19", "Brighton Resort",     "https://www.brightonresort.com/events"),
+        ("Brighton Fall Bike Park Opening",    "2026-06-20", "Brighton Resort",     "https://www.brightonresort.com/events"),
+        ("Park City Mountain Closing Day",     "2026-04-19", "Park City Mountain",  "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
+        ("Park City Mountain 4th of July",     "2026-07-04", "Park City Mountain",  "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
     ]
-    events = [{"source": "the_ruth", "name": n, "date": start,
-               "venue": "The Ruth and Nathan Hale Theater",
-               "category": "Theater", "url": "https://tickets.theruth.org/events"}
-              for n, start, end in season if end >= now_str]
-    print(f"    The Ruth: {len(events)} events")
-    return events
+    events = [{"source": "ski_resort", "name": n, "date": d, "venue": v,
+               "category": "Sports", "url": u}
+              for n, d, v, u in known if d >= now_str]
+    api_key = os.environ.get("SERPAPI_API_KEY", "") or os.environ.get("SERPAPI_KEY", "")
+    if api_key:
+        for q, v, u in [
+            ("Alta ski resort events 2026",       "Alta Ski Area",       "https://www.alta.com/events"),
+            ("Snowbird resort events 2026",        "Snowbird Resort",     "https://www.snowbird.com/activities-events/events/events-calendar/"),
+            ("Park City Mountain events 2026",     "Park City Mountain",  "https://www.parkcitymountain.com/explore-the-resort/during-your-stay/park-city-events.aspx"),
+            ("Deer Valley events 2026",            "Deer Valley Resort",  "https://www.deervalley.com/things-to-do/events"),
+        ]:
+            existing = {e["name"] for e in events}
+            for e in _serpapi(q, api_key, v, "Sports", u):
+                if e["name"] not in existing:
+                    events.append(e)
+    print(f"    Ski Resort Events: {len(_dedup(events))} events")
+    return _dedup(events)
 
 
-# ── SCERA Shell Outdoor Theatre ───────────────────────────────────────────────
-def fetch_scera_shell() -> list[dict]:
+def fetch_utah_olympic() -> list[dict]:
     events = []
-    for path in ["/event-category/scera-shell-outdoor-theatre/",
-                 "/event-category/concerts/", "/event-category/live-theater/"]:
-        soup = _get(f"https://scera.org{path}")
+    pages = [
+        ("https://utaholympiclegacy.org/soho-events/", "Soldier Hollow Nordic Center"),
+        ("https://utaholympiclegacy.org/park-events/", "Utah Olympic Park"),
+        ("https://utaholympiclegacy.org/oval-events/", "Utah Olympic Oval"),
+    ]
+    for url, venue in pages:
+        soup = _get(url)
         if not soup:
             continue
-        for item in soup.select("h2, h3"):
-            link = item.find("a")
-            if not link:
-                continue
-            name = link.get_text(strip=True)
-            if not name or len(name) < 3:
-                continue
-            url = link["href"] if link.get("href") else "https://scera.org"
-            date_tag = item.find_next(string=re.compile(
-                r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2}'))
-            date_text = ""
-            if date_tag:
-                match = re.search(r'(\w+ \d{1,2})[^,]*,?\s*(20\d{2})?', date_tag)
+        current_date = ""
+        for tag in soup.select("h3, h4, a[href*='/event/']"):
+            if tag.name in ("h3", "h4"):
+                match = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})',
+                    tag.get_text(strip=True))
                 if match:
                     try:
-                        year = match.group(2) or "2026"
-                        date_text = datetime.strptime(
-                            f"{match.group(1)} {year}", "%B %d %Y"
+                        current_date = datetime.strptime(
+                            f"{match.group(1)} {match.group(2)} 2026", "%B %d %Y"
                         ).strftime("%Y-%m-%d")
                     except ValueError:
-                        pass
-            events.append({"source": "scera_shell", "name": name, "date": date_text,
-                           "venue": "SCERA Shell Outdoor Theatre", "category": "Arts & Theater", "url": url})
-    seen = set()
-    unique = [e for e in events if e["name"] not in seen and not seen.add(e["name"])]
-    print(f"    SCERA Shell: {len(unique)} events")
-    return unique
+                        current_date = ""
+            elif tag.name == "a" and "/event/" in tag.get("href", ""):
+                name = tag.get_text(strip=True)
+                if not name or len(name) < 3:
+                    continue
+                href = tag["href"]
+                if href.startswith("/"):
+                    href = "https://utaholympiclegacy.org" + href
+                events.append({"source": "utah_olympic", "name": name,
+                                "date": current_date, "venue": venue,
+                                "category": "Sports", "url": href})
+    print(f"    Utah Olympic Legacy: {len(_dedup(events))} events")
+    return _dedup(events)
 
 
-# ── SCERA Center ──────────────────────────────────────────────────────────────
-def fetch_scera() -> list[dict]:
-    events = []
-    soup = _get("https://www.scera.org/events/")
-    if soup:
-        for item in soup.select(".event, article, .tribe-event"):
-            name = item.select_one("h2, h3, .entry-title, .tribe-event-url")
-            date = item.select_one("time, .tribe-event-date-start, .event-date")
-            link = item.select_one("a")
-            if not name:
-                continue
-            url = link["href"] if link and link.get("href") else "https://www.scera.org/events/"
-            events.append({"source": "scera", "name": name.get_text(strip=True),
-                           "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
-                           "venue": "SCERA Center for the Arts", "category": "Arts & Theater", "url": url})
-    print(f"    SCERA: {len(events)} events")
-    return events
-
-
-# ── The Off Broadway Theatre ──────────────────────────────────────────────────
-def fetch_obt() -> list[dict]:
+def fetch_soldier_hollow() -> list[dict]:
     now_str = NOW.strftime("%Y-%m-%d")
-    season = [
-        ("OBT: Greased",            "2026-01-08", "2026-03-28"),
-        ("OBT: The Princess Bride", "2026-04-02", "2026-06-06"),
-        ("OBT: Big Bang Parody",    "2026-06-11", "2026-08-22"),
-        ("OBT: Scooby-Doo Parody",  "2026-08-27", "2026-11-07"),
-        ("OBT: Nutcracker Parody",  "2026-11-12", "2027-01-02"),
-    ]
-    events = [{"source": "obt", "name": name, "date": start,
-               "venue": "The Off Broadway Theatre", "category": "Comedy",
-               "url": "https://offbroadwaytheatreco.ludus.com/index.php"}
-              for name, start, end in season if end >= now_str]
-    # Weekly Laughing Stock Improv — Fridays & Saturdays
-    current = NOW
-    while current <= END:
-        if current.weekday() in (4, 5):
-            events.append({
-                "source": "obt",
-                "name": "OBT: Laughing Stock Improv Comedy",
-                "date": current.strftime("%Y-%m-%d"),
-                "venue": "The Off Broadway Theatre",
-                "category": "Comedy",
-                "url": "https://offbroadwaytheatreco.ludus.com/index.php",
-            })
-        current += timedelta(days=1)
-    print(f"    OBT: {len(events)} events")
+    days = [("2026-05-22", "Friday"), ("2026-05-23", "Saturday"),
+            ("2026-05-24", "Sunday"), ("2026-05-25", "Monday — Memorial Day")]
+    events = [{"source": "soldier_hollow",
+               "name": f"Soldier Hollow Classic Sheepdog Championship ({label})",
+               "date": date, "venue": "Soldier Hollow, Heber Valley, UT",
+               "category": "Community", "url": "https://soldierhollowclassic.com/2026-tickets/"}
+              for date, label in days if date >= now_str]
+    print(f"    Soldier Hollow Classic: {len(events)} events")
     return events
 
 
-# ── KRCL Events ───────────────────────────────────────────────────────────────
+# ── Community & Local ─────────────────────────────────────────────────────────
+
 def fetch_krcl() -> list[dict]:
     events = []
-    for category in ["live-music"]:  # arts-culture and community return 500 errors
-        soup = _get(f"https://krcl.org/events/?category={category}")
-        if not soup:
-            continue
+    soup = _get("https://krcl.org/events/?category=live-music")
+    if soup:
         for item in soup.select("article, .event, .tribe-event, .wp-block-post"):
             name = item.select_one("h2, h3, .tribe-event-url, .entry-title, .wp-block-post-title")
             date = item.select_one("time, .tribe-event-date-start, .event-date")
@@ -803,7 +752,6 @@ def fetch_krcl() -> list[dict]:
     return events
 
 
-# ── NowPlayingUtah ────────────────────────────────────────────────────────────
 def fetch_nowplaying_utah() -> list[dict]:
     events = []
     soup = _get("https://www.nowplayingutah.com/events/")
@@ -824,34 +772,40 @@ def fetch_nowplaying_utah() -> list[dict]:
     return events
 
 
-# ── Farmers Markets ───────────────────────────────────────────────────────────
 def fetch_farmers_markets() -> list[dict]:
     events = []
     now_str = NOW.strftime("%Y-%m-%d")
-    slc_dates = ["2026-06-06","2026-06-13","2026-06-20","2026-06-27",
-                 "2026-07-04","2026-07-11","2026-07-18","2026-07-25",
-                 "2026-08-01","2026-08-08","2026-08-15","2026-08-22","2026-08-29",
-                 "2026-09-05","2026-09-12","2026-09-19","2026-09-26",
-                 "2026-10-03","2026-10-10","2026-10-17"]
+    slc_dates = [
+        "2026-06-06","2026-06-13","2026-06-20","2026-06-27",
+        "2026-07-04","2026-07-11","2026-07-18","2026-07-25",
+        "2026-08-01","2026-08-08","2026-08-15","2026-08-22","2026-08-29",
+        "2026-09-05","2026-09-12","2026-09-19","2026-09-26",
+        "2026-10-03","2026-10-10","2026-10-17",
+    ]
     for d in slc_dates:
         if d >= now_str:
-            events.append({"source": "farmers_market", "name": "SLC Farmers Market at Pioneer Park",
+            events.append({"source": "farmers_market",
+                           "name": "SLC Farmers Market at Pioneer Park",
                            "date": d, "venue": "Pioneer Park, Salt Lake City",
-                           "category": "Farmers Market", "url": "https://www.slcfarmersmarket.org"})
-    tp_dates = ["2026-06-04","2026-06-11","2026-06-18","2026-06-25",
-                "2026-07-09","2026-07-16","2026-07-23","2026-07-30",
-                "2026-08-06","2026-08-13","2026-08-20","2026-08-27",
-                "2026-09-03","2026-09-10","2026-09-17","2026-09-24"]
+                           "category": "Farmers Market",
+                           "url": "https://www.slcfarmersmarket.org"})
+    tp_dates = [
+        "2026-06-04","2026-06-11","2026-06-18","2026-06-25",
+        "2026-07-09","2026-07-16","2026-07-23","2026-07-30",
+        "2026-08-06","2026-08-13","2026-08-20","2026-08-27",
+        "2026-09-03","2026-09-10","2026-09-17","2026-09-24",
+    ]
     for d in tp_dates:
         if d >= now_str:
-            events.append({"source": "farmers_market", "name": "Thanksgiving Point Farmers Market",
+            events.append({"source": "farmers_market",
+                           "name": "Thanksgiving Point Farmers Market",
                            "date": d, "venue": "Thanksgiving Point, Lehi",
-                           "category": "Farmers Market", "url": "https://thanksgivingpoint.org"})
+                           "category": "Farmers Market",
+                           "url": "https://thanksgivingpoint.org"})
     print(f"    Farmers Markets: {len(events)} events")
     return events
 
 
-# ── Google Events via SerpAPI ─────────────────────────────────────────────────
 def fetch_google_events() -> list[dict]:
     api_key = os.environ.get("SERPAPI_API_KEY", "") or os.environ.get("SERPAPI_KEY", "")
     if not api_key:
@@ -879,13 +833,13 @@ def fetch_google_events() -> list[dict]:
 
 
 # ── Combined entry point ──────────────────────────────────────────────────────
+
 def scrape_extra() -> list[dict]:
     all_events = []
     for fn in [
         fetch_ticketmaster_venues,
         fetch_predicthq,
         fetch_visit_salt_lake,
-        fetch_silicon_slopes,
         fetch_velour,
         fetch_thanksgiving_point,
         fetch_utah_motorsports,
