@@ -15,7 +15,7 @@ BATCH_SIZE = 50
 
 
 def rank_events(events: list[dict]) -> list[dict]:
-    client = anthropic.AnthropicBedrock()
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     ranked = []
 
     for i in range(0, len(events), BATCH_SIZE):
@@ -39,7 +39,7 @@ Events:
 """
 
         msg = client.messages.create(
-            model="us.anthropic.claude-sonnet-4-5",
+            model="claude-sonnet-4-5",
             max_tokens=2000,
             messages=[{"role": "user", "content": prompt}]
         )
