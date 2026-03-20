@@ -358,15 +358,247 @@ def fetch_google_events() -> list[dict]:
     return events
 
 
+# ── Covey Center for the Arts (Provo) ────────────────────────────────────────
+def fetch_covey_center() -> list[dict]:
+    events = []
+    pages = [
+        ("https://www.provo.gov/1023/Covey-Presents",   "Arts & Theater"),
+        ("https://www.provo.gov/1220/Free-Concerts",     "Music"),
+        ("https://www.provo.gov/1234/Black-Box-Shows",   "Theater"),
+        ("https://www.provo.gov/1140/Community-Events",  "Community"),
+    ]
+    for url, category in pages:
+        soup = _get(url)
+        if not soup:
+            continue
+        for item in soup.select("li a, .listing a, h2 a, h3 a, h4 a"):
+            name = item.get_text(strip=True)
+            href = item.get("href", "")
+            if not name or len(name) < 5:
+                continue
+            # Skip nav/utility links
+            skip = ["tickets", "visit", "classes", "rentals", "support", "about",
+                    "home", "search", "sign in", "contact", "giveaway", "rules",
+                    "get tickets", "covey presents", "free concerts", "black box",
+                    "community events", "ticket giveaway", "back box shows"]
+            if any(s in name.lower() for s in skip):
+                continue
+            if href.startswith("/"):
+                href = "https://www.provo.gov" + href
+            # Fetch the show's own page to get the date
+            date_text = ""
+            show_soup = _get(href)
+            if show_soup:
+                date_tag = show_soup.find(string=re.compile(
+                    r'\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}'
+                ))
+                if date_tag:
+                    match = re.search(
+                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})[^,]*,?\s*(20\d{2})?',
+                        date_tag
+                    )
+                    if match:
+                        try:
+                            year = match.group(3) or "2026"
+                            date_text = datetime.strptime(
+                                f"{match.group(1)} {match.group(2)} {year}", "%B %d %Y"
+                            ).strftime("%Y-%m-%d")
+                        except ValueError:
+                            pass
+            events.append({
+                "source": "covey_center",
+                "name": name,
+                "date": date_text,
+                "venue": "Covey Center for the Arts",
+                "category": category,
+                "url": href,
+            })
+
+    # Deduplicate by name
+    seen = set()
+    unique = []
+    for e in events:
+        if e["name"] not in seen:
+            seen.add(e["name"])
+            unique.append(e)
+
+    print(f"    Covey Center: {len(unique)} events")
+    return unique
+
+
+# ── The Ruth and Nathan Hale Theater ─────────────────────────────────────────
+def fetch_the_ruth() -> list[dict]:
+    # Try scraping their tickets page first
+    events = []
+    soup = _get("https://www.theruth.org/tickets")
+    if soup:
+        for item in soup.select(".production, .show, article, .event-item"):
+            name = item.select_one("h2, h3, .title, .production-title")
+            date = item.select_one("time, .dates, .run-dates, .date")
+            link = item.select_one("a")
+            if not name:
+                continue
+            url = link["href"] if link and link.get("href") else "https://www.theruth.org/tickets"
+            if url.startswith("/"):
+                url = "https://www.theruth.org" + url
+            events.append({
+                "source": "the_ruth",
+                "name": name.get_text(strip=True),
+                "date": date.get_text(strip=True)[:10] if date else "",
+                "venue": "The Ruth and Nathan Hale Theater",
+                "category": "Theater",
+                "url": url,
+            })
+
+    # Fallback: hardcode known 2026 season (from theruth.org/ticket-info/2026-season-announcement)
+    if not events:
+        now_str = datetime.utcnow().strftime("%Y-%m-%d")
+        season = [
+            ("Fiddler on the Roof",     "2026-01-30", "2026-03-21"),
+            ("Pride and Prejudice",      "2026-04-03", "2026-05-23"),
+            ("The Addams Family",        "2026-06-05", "2026-07-25"),
+            ("Newsies",                  "2026-08-07", "2026-09-26"),
+            ("Into the Woods",           "2026-10-09", "2026-11-21"),
+            ("A Christmas Carol",        "2026-12-04", "2026-12-23"),
+        ]
+        for show_name, start, end in season:
+            if end >= now_str:  # only include if not yet finished
+                events.append({
+                    "source": "the_ruth",
+                    "name": show_name,
+                    "date": start,
+                    "venue": "The Ruth and Nathan Hale Theater",
+                    "category": "Theater",
+                    "url": "https://tickets.theruth.org/events",
+                })
+
+    print(f"    The Ruth: {len(events)} events")
+    return events
+
+
+# ── SCERA Shell Outdoor Theatre ──────────────────────────────────────────────
+def fetch_scera_shell() -> list[dict]:
+    events = []
+    for path in [
+        "/event-category/scera-shell-outdoor-theatre/",
+        "/event-category/concerts/",
+        "/event-category/live-theater/",
+        "/event-category/outdoor-movies/",
+    ]:
+        soup = _get(f"https://scera.org{path}")
+        if not soup:
+            continue
+        for item in soup.select("h2, h3"):
+            link = item.find("a")
+            if not link:
+                continue
+            name = link.get_text(strip=True)
+            if not name or len(name) < 3:
+                continue
+            url = link["href"] if link.get("href") else "https://scera.org"
+            # Try to find a date near this heading
+            date_tag = item.find_next(string=re.compile(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2}'))
+            date_text = ""
+            if date_tag:
+                # Parse "June 05 - June 20, 2026" → "2026-06-05"
+                match = re.search(r'(\w+ \d{1,2})[^,]*,?\s*(20\d{2})?', date_tag)
+                if match:
+                    try:
+                        year = match.group(2) or "2026"
+                        date_text = datetime.strptime(f"{match.group(1)} {year}", "%B %d %Y").strftime("%Y-%m-%d")
+                    except ValueError:
+                        date_text = ""
+            events.append({
+                "source": "scera_shell",
+                "name": name,
+                "date": date_text,
+                "venue": "SCERA Shell Outdoor Theatre",
+                "category": "Arts & Theater",
+                "url": url,
+            })
+
+    # Deduplicate by name
+    seen = set()
+    unique = []
+    for e in events:
+        if e["name"] not in seen:
+            seen.add(e["name"])
+            unique.append(e)
+
+    print(f"    SCERA Shell: {len(unique)} events")
+    return unique
+
+
+# ── The Off Broadway Theatre (OBT) ───────────────────────────────────────────
+def fetch_obt() -> list[dict]:
+    events = []
+    for path in ["/performances", "/2026-season", "/"]:
+        soup = _get(f"https://www.theobt.org{path}")
+        if not soup:
+            continue
+        for item in soup.select(".entry-content, .show, .production, article, .performance"):
+            name = item.select_one("h1, h2, h3, .entry-title")
+            date = item.select_one("time, .dates, .date, .run-dates")
+            link = item.select_one("a")
+            if not name or len(name.get_text(strip=True)) < 3:
+                continue
+            # Skip nav/footer links
+            text = name.get_text(strip=True)
+            if text.lower() in ["home", "about", "contact", "tickets", "donate"]:
+                continue
+            url = link["href"] if link and link.get("href") else "https://www.theobt.org"
+            if url.startswith("/"):
+                url = "https://www.theobt.org" + url
+            date_text = date.get_text(strip=True) if date else ""
+            events.append({
+                "source": "obt",
+                "name": f"OBT: {text}",
+                "date": date_text[:10] if date_text else "",
+                "venue": "The Off Broadway Theatre",
+                "category": "Comedy",
+                "url": url,
+            })
+        if events:
+            break  # stop once we find a page with results
+
+    # Deduplicate by name
+    seen = set()
+    unique = []
+    for e in events:
+        if e["name"] not in seen:
+            seen.add(e["name"])
+            unique.append(e)
+
+    print(f"    OBT: {len(unique)} events")
+    return unique
+
+
 # ── Combined entry point ──────────────────────────────────────────────────────
 def scrape_extra() -> list[dict]:
     all_events = []
     for fn in [
         fetch_ticketmaster_venues,
+        fetch_velour,
+        fetch_thanksgiving_point,
+        fetch_utah_motorsports,
+        fetch_byu_events,
+        fetch_slcc_events,
+        fetch_weber_events,
+        fetch_uvu_events,
+        fetch_utah_university_events,
+        fetch_utah_stadium_events,
+        fetch_desert_star,
+        fetch_usuo,
+        fetch_ski_resort_events,
+        fetch_utah_olympic,
+        fetch_soldier_hollow,
+        fetch_the_ruth,
         fetch_red_butte,
+        fetch_scera_shell,
         fetch_scera,
-        fetch_covey,
+        fetch_covey_center,
         fetch_repeal,
+        fetch_obt,
         fetch_krcl,
         fetch_nowplaying_utah,
         fetch_farmers_markets,
