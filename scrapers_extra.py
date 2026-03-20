@@ -288,6 +288,9 @@ def fetch_uvu_events() -> list[dict]:
 
 def fetch_utah_university_events() -> list[dict]:
     events = []
+    skip = {"filter events", "all events", "submit an event", "home", "search",
+            "sign in", "contact", "about", "calendar policies", "quick links",
+            "site links", "notifications", "report an issue"}
     soup = _get("https://events.utah.edu/")
     if soup:
         for item in soup.select("article, .event, .tribe-event, .eventitem"):
@@ -296,8 +299,11 @@ def fetch_utah_university_events() -> list[dict]:
             link = item.select_one("a")
             if not name:
                 continue
+            name_text = name.get_text(strip=True)
+            if not name_text or len(name_text) < 5 or name_text.lower() in skip:
+                continue
             url = link["href"] if link and link.get("href") else "https://events.utah.edu/"
-            events.append({"source": "utah_university", "name": name.get_text(strip=True),
+            events.append({"source": "utah_university", "name": name_text,
                            "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
                            "venue": "University of Utah, Salt Lake City",
                            "category": "Arts & Theater", "url": url})
@@ -479,6 +485,9 @@ def fetch_covey_center() -> list[dict]:
         ("https://www.provo.gov/1320/A-Little-Murder-Never-Hurt-Anybody", "A Little Murder Never Hurt Anybody", "Theater"),
         ("https://www.provo.gov/1236/Jacob-Marleys-Christmas-Carol", "Jacob Marley's Christmas Carol", "Theater"),
     ]
+    nav_skip = {"support", "tickets", "visit", "classes", "rentals", "about", "home",
+                "search", "contact", "giveaway", "donate", "membership", "volunteer",
+                "careers", "dining", "privacy policy", "accessibility", "site map"}
 
     for url, name, category in known_shows:
         date_text = ""
@@ -516,7 +525,7 @@ def fetch_covey_center() -> list[dict]:
             if full_url in known_urls:
                 continue  # already added above
             name = a.get_text(strip=True)
-            if not name or len(name) < 5:
+            if not name or len(name) < 5 or name.lower() in nav_skip:
                 continue
             known_urls.add(full_url)
             date_text = ""
@@ -674,12 +683,12 @@ def fetch_obt() -> list[dict]:
 # ── KRCL Events ───────────────────────────────────────────────────────────────
 def fetch_krcl() -> list[dict]:
     events = []
-    for category in ["live-music", "arts-culture", "community"]:
+    for category in ["live-music", "arts-culture"]:  # removed "community" — was 500 erroring
         soup = _get(f"https://krcl.org/events/?category={category}")
         if not soup:
             continue
-        for item in soup.select("article, .event, .tribe-event"):
-            name = item.select_one("h2, h3, .tribe-event-url, .entry-title")
+        for item in soup.select("article, .event, .tribe-event, .wp-block-post"):
+            name = item.select_one("h2, h3, .tribe-event-url, .entry-title, .wp-block-post-title")
             date = item.select_one("time, .tribe-event-date-start, .event-date")
             link = item.select_one("a")
             if not name:
@@ -687,7 +696,7 @@ def fetch_krcl() -> list[dict]:
             url = link["href"] if link and link.get("href") else "https://krcl.org/events"
             events.append({"source": "krcl", "name": name.get_text(strip=True),
                            "date": date.get("datetime", date.get_text(strip=True))[:10] if date else "",
-                           "venue": "", "category": category.replace("-", " ").title(), "url": url})
+                           "venue": "", "category": "Live Music", "url": url})
     print(f"    KRCL: {len(events)} events")
     return events
 
