@@ -23,7 +23,7 @@ def _get(url: str) -> BeautifulSoup | None:
 
 # ── Kilby Court ───────────────────────────────────────────────────────────────
 def fetch_kilby_court() -> list[dict]:
-    soup = _get("https://www.kilbycourt.com/events")
+    soup = _get("https://kilbycourt.com/shows")
     if not soup:
         return []
     events = []
@@ -33,9 +33,9 @@ def fetch_kilby_court() -> list[dict]:
         link = item.select_one("a")
         if not name:
             continue
-        url = link["href"] if link else "https://www.kilbycourt.com/events"
+        url = link["href"] if link else "https://kilbycourt.com/shows"
         if url.startswith("/"):
-            url = "https://www.kilbycourt.com" + url
+            url = "https://kilbycourt.com" + url
         events.append({
             "source": "kilby_court",
             "name": name.get_text(strip=True),
@@ -50,7 +50,7 @@ def fetch_kilby_court() -> list[dict]:
 
 # ── The Depot ─────────────────────────────────────────────────────────────────
 def fetch_the_depot() -> list[dict]:
-    soup = _get("https://www.depotslc.com/events")
+    soup = _get("https://depotslc.com/events")
     if not soup:
         return []
     events = []
@@ -77,7 +77,7 @@ def fetch_the_depot() -> list[dict]:
 
 # ── The State Room ────────────────────────────────────────────────────────────
 def fetch_state_room() -> list[dict]:
-    soup = _get("https://www.thestateroomslc.com/events")
+    soup = _get("https://thestateroomslc.com/events")
     if not soup:
         return []
     events = []
@@ -178,7 +178,7 @@ def fetch_utah_arts() -> list[dict]:
             })
 
     # Utah Shakespeare Festival (Cedar City — worth the drive)
-    soup2 = _get("https://www.bard.org/shows/")
+    soup2 = _get("https://bard.org/shows/")
     if soup2:
         for item in soup2.select(".show, .production, article"):
             name = item.select_one("h2, h3, .title")
