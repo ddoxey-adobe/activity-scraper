@@ -30,6 +30,7 @@ jobs:
           EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
           BANDSINTOWN_APP_ID: ${{ secrets.BANDSINTOWN_APP_ID }}
           MEETUP_API_KEY: ${{ secrets.MEETUP_API_KEY }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
         run: python scraper.py
 
       - name: Rank events with Claude
