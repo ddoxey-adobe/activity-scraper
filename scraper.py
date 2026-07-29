@@ -106,17 +106,6 @@ def fetch_meetup() -> list[dict]:
     return []
 
 
-def deduplicate(events: list[dict]) -> list[dict]:
-    seen = set()
-    out = []
-    for e in events:
-        key = (e["name"].lower().strip(), e["date"])
-        if key not in seen:
-            seen.add(key)
-            out.append(e)
-    return out
-
-
 def scrape_all() -> list[dict]:
     all_events = []
     for fn, label in [
@@ -134,15 +123,17 @@ def scrape_all() -> list[dict]:
 
     print("  Extra sources:")
     all_events.extend(scrape_extra())
-
-    deduped = deduplicate(all_events)
-    print(f"  Total after dedup: {len(deduped)}")
-    return deduped
+    return all_events
 
 
 if __name__ == "__main__":
     print("Scraping events...")
     events = scrape_all()
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    before = len(events)
+    events = [e for e in events if not e.get("date") or e["date"] >= today]
+    print(f"  Dropped {before - len(events)} past events")
 
     print("Deduplicating...")
     events, removed = deduplicate(events)
